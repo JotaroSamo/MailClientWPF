@@ -55,7 +55,7 @@ namespace MailClient.Network
             {
                 try
                 {
-                    client.Close();
+                    client?.Close();
                 }
                 catch (Exception)
                 {

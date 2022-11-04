@@ -5,15 +5,70 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MailClient"
         mc:Ignorable="d"
-        Title="MailContent" Height="450" Width="526">
-    <Grid >
-        <DataGrid Background="Yellow" BorderBrush="#FFF7F7F7" >
-            <DataGrid.Columns  >
-                <DataGridTextColumn IsReadOnly="True" Header="ID" Width="25" />
-                <DataGridTextColumn IsReadOnly="True" Header="Дата" Width="100"/>
-                <DataGridTextColumn IsReadOnly="True" Header="От кого" Width="250"/>
-                <DataGridTextColumn IsReadOnly="True" Header="Тема" Width="150"/>
-            </DataGrid.Columns>
-        </DataGrid>
-    </Grid>
+        Title="MailContent" Height="450" Width="850">
+    <TabControl x:Name="ReciveSend" Height="450" Width="850">
+        <TabItem x:Name="Mess">
+            <TabItem.Header>
+                <TextBlock Height="19" Width="132" HorizontalAlignment="Center">Входящие</TextBlock>
+            </TabItem.Header>
+            <TabItem.Content>
+                <Grid  Height="450" Width="850" >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <DataGrid  Margin="10,0,445,69" BorderBrush="Red" x:Name="ReciveMessCheck" >
+                        <DataGrid.Columns  >
+                            <DataGridTextColumn x:Name="ID" IsReadOnly="True" Header="ID" Width="25" />
+                            <DataGridTextColumn  x:Name="Date" IsReadOnly="True" Header="Дата" Width="100"/>
+                            <DataGridTextColumn x:Name="How" IsReadOnly="True" Header="От кого" Width="*"/>
+                            <DataGridTextColumn x:Name="Topic" Header="Тема" Width="*"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    <TextBox x:Name="Outblock" HorizontalAlignment="Left" Margin="425,0,0,0" TextWrapping="Wrap" IsReadOnly="True" VerticalAlignment="Top" Width="400" Height="381" BorderBrush="Red"/>
+
+
+
+                </Grid>
+            </TabItem.Content>
+        </TabItem>
+        <TabItem x:Name="Send">
+            <TabItem.Header>
+                <TextBlock Height="19" Width="87" HorizontalAlignment="Center">Исходящие</TextBlock>
+            </TabItem.Header>
+            <TabItem.Content>
+                <Grid  Height="450" Width="850" >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <DataGrid  Margin="10,0,445,69" BorderBrush="Red" x:Name="SendMessCheck">
+                        <DataGrid.Columns  >
+                            <DataGridTextColumn x:Name="IDs" IsReadOnly="True" Header="ID" Width="25" />
+                            <DataGridTextColumn  x:Name="Dates" IsReadOnly="True" Header="Дата" Width="100"/>
+                            <DataGridTextColumn x:Name="Whom" IsReadOnly="True" Header="От кого" Width="*"/>
+                            <DataGridTextColumn x:Name="Topics" Header="Тема" Width="*"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    <TextBox x:Name="Sendblock" HorizontalAlignment="Left" Margin="425,0,0,0" TextWrapping="Wrap" IsReadOnly="True" VerticalAlignment="Top" Width="400" Height="381" BorderBrush="Red"/>
+
+
+                </Grid>
+            </TabItem.Content>
+        </TabItem>
+        <TabItem x:Name="SendMess">
+            <TabItem.Header>
+                <TextBlock Height="19" Width="87" HorizontalAlignment="Center">Исходящие</TextBlock>
+            </TabItem.Header>
+            <TabItem.Content>
+                <Grid Height="450" Width="850" >
+                    <TextBox HorizontalAlignment="Center" Margin="0,78,0,0" TextWrapping="Wrap" Text="TextBox" Width="806" BorderBrush="#FF0441F7" Height="208" VerticalAlignment="Top"/>
+                    <TextBox HorizontalAlignment="Center" Margin="0,38,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="160" Height="35"/>
+                    <TextBox HorizontalAlignment="Left" Margin="22,38,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="290" Height="35"/>
+                    <Label Content="Кому" HorizontalAlignment="Left" Margin="22,7,0,0" VerticalAlignment="Top"/>
+                    <Label Content="Тема" HorizontalAlignment="Left" Margin="345,12,0,0" VerticalAlignment="Top"/>
+
+                </Grid>
+            </TabItem.Content>
+        </TabItem>
+    </TabControl>
+
 </Window>
