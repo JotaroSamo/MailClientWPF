@@ -5,14 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MailClient"
         mc:Ignorable="d"
-        Title="Авторизация" Height="300" Width="400" Background="Black">
+        Title="Авторизация" Height="300" Width="400">
         
-    <Grid Background="Yellow">
+    <Grid >
         <StackPanel>
-            <TextBox x:Name="MailName" Margin="40" Text="Почта"  Foreground="White" RenderTransformOrigin="0.5,3.5" Height="20" Width="270" Background="Black" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
-            <PasswordBox x:Name="PasswordText" RenderTransformOrigin="0.5,3.5" Height="20" Width="270" Foreground="White" Background="Black" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
-            <Button Margin="40" Height="20" Width="270" Content="Вход" Click="Out_Click" Background="Black" Foreground="White"></Button>
-            <Button Margin="10" Height="20" Width="100" Content="Регестрация" Click="Reg_Click" Background="Black" Foreground="White"></Button>
+            <TextBox x:Name="MailName" Margin="40" Text="Почта"  Foreground="Black" RenderTransformOrigin="0.5,3.5" Height="20" Width="270" Background="White" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
+            <PasswordBox x:Name="PasswordText" RenderTransformOrigin="0.5,3.5" Height="20" Width="270" Foreground="Black" Background="White" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <Button Margin="40" Height="20" Width="270" Content="Вход" Click="Out_Click" Background="White" Foreground="Black"></Button>
+            <Button Margin="10" Height="20" Width="100" Content="Регестрация" Click="Reg_Click" Background="White" Foreground="Black"></Button>
         </StackPanel>
 
     </Grid>

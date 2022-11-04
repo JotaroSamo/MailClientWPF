@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MailClient"
         mc:Ignorable="d"
-        Title="MailContent" Height="450" Width="850">
+        Title="Почта" Height="450" Width="850">
     <TabControl x:Name="ReciveSend" Height="450" Width="850">
         <TabItem x:Name="Mess">
             <TabItem.Header>

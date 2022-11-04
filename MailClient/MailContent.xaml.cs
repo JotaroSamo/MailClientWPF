@@ -22,6 +22,7 @@ namespace MailClient
         public MailContent(string Mail)
         {
             InitializeComponent();
+            
         }
     }
 }
