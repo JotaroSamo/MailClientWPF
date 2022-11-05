@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MailClient"
         mc:Ignorable="d"
-        Title="Почта" Height="450" Width="850">
-    <TabControl x:Name="ReciveSend" Height="450" Width="850">
+        Title="Почта" Height="450" Width="850" Loaded="Window_Loaded">
+    <TabControl x:Name="ReciveSend" Height="450" Width="850" Loaded="ReciveSend_Loaded">
         <TabItem x:Name="Mess">
             <TabItem.Header>
                 <TextBlock Height="19" Width="132" HorizontalAlignment="Center">Входящие</TextBlock>
@@ -16,12 +16,12 @@
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
-                    <DataGrid  Margin="10,0,445,69" BorderBrush="Red" x:Name="ReciveMessCheck" >
+                    <DataGrid x:Name="OutMess" Margin="8,0,447,69" BorderBrush="Red" AutoGenerateColumns="False" >
                         <DataGrid.Columns  >
-                            <DataGridTextColumn x:Name="ID" IsReadOnly="True" Header="ID" Width="25" />
-                            <DataGridTextColumn  x:Name="Date" IsReadOnly="True" Header="Дата" Width="100"/>
-                            <DataGridTextColumn x:Name="How" IsReadOnly="True" Header="От кого" Width="*"/>
-                            <DataGridTextColumn x:Name="Topic" Header="Тема" Width="*"/>
+                            <DataGridTextColumn Binding="{Binding Path= Id}" IsReadOnly="True" Header="ID" Width="25" />
+                            <DataGridTextColumn Binding="{Binding Path= DateTime}" IsReadOnly="True" Header="Дата" Width="100"/>
+                            <DataGridTextColumn Binding="{Binding Path= HowMess}"  IsReadOnly="True" Header="От кого" Width="*"/>
+                            <DataGridTextColumn Binding="{Binding Path= Topic}"  Header="Тема" Width="*"/>
                         </DataGrid.Columns>
                     </DataGrid>
                     <TextBox x:Name="Outblock" HorizontalAlignment="Left" Margin="425,0,0,0" TextWrapping="Wrap" IsReadOnly="True" VerticalAlignment="Top" Width="400" Height="381" BorderBrush="Red"/>
@@ -60,11 +60,12 @@
             </TabItem.Header>
             <TabItem.Content>
                 <Grid Height="450" Width="850" >
-                    <TextBox HorizontalAlignment="Center" Margin="0,78,0,0" TextWrapping="Wrap" Text="TextBox" Width="806" BorderBrush="#FF0441F7" Height="208" VerticalAlignment="Top"/>
-                    <TextBox HorizontalAlignment="Center" Margin="0,38,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="160" Height="35"/>
-                    <TextBox HorizontalAlignment="Left" Margin="22,38,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="290" Height="35"/>
+                    <TextBox HorizontalAlignment="Center" Margin="0,78,0,0" TextWrapping="Wrap" Text="TextBox" Width="806" BorderBrush="#FF0441F7" Height="208" VerticalAlignment="Top" x:Name="Mbox"/>
+                    <TextBox HorizontalAlignment="Center" Margin="0,38,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="160" Height="35" x:Name="Tbox"/>
+                    <TextBox HorizontalAlignment="Left" Margin="22,38,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="290" Height="35" x:Name="Hbox"/>
                     <Label Content="Кому" HorizontalAlignment="Left" Margin="22,7,0,0" VerticalAlignment="Top"/>
                     <Label Content="Тема" HorizontalAlignment="Left" Margin="345,12,0,0" VerticalAlignment="Top"/>
+                    <Button Content="Отправить" HorizontalAlignment="Center" Margin="0,324,0,0" VerticalAlignment="Top" Width="806" Click="SendMessage" />
 
                 </Grid>
             </TabItem.Content>

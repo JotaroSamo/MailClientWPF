@@ -29,20 +29,20 @@ namespace MailClient
 
         private void Out_Click(object sender, RoutedEventArgs e)
         {
-            //Check checkUser = new Check();
-            //bool b = checkUser.Checks(MailName.Text, PasswordText.Password, "+");
-            //if (b == true)
-            //{
-            //    MailContent open = new MailContent(MailName.Text);
-            //    open.Show();
-            //    //this.Hide();
-            //}
-            //if (b == false)
-            //{
-            //    MessageBox.Show("Не правельный логин или пароль!!!");
-            //}
-            MailContent open = new MailContent(MailName.Text);
-            open.Show();
+            Check checkUser = new Check();
+            bool b = checkUser.Checks(MailName.Text, PasswordText.Password, "+");
+            if (b == true)
+            {
+                MailContent open = new MailContent(MailName.Text);
+                open.Show();
+                //this.Hide();
+            }
+            if (b == false)
+            {
+                MessageBox.Show("Не правельный логин или пароль!!!");
+            }
+            //MailContent open = new MailContent(MailName.Text);
+            //open.Show();
         }
 
         private void Reg_Click(object sender, RoutedEventArgs e)

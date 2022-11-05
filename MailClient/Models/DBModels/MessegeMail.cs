@@ -10,9 +10,9 @@ namespace MailClient.Models.DBModels
     {
         public int Id { get; set; }
         public DateTime DateTime { get; set; }
-        public string Topic { get; set; }
-        public string Message { get; set; }
-        public string? HowMess { get; set; }
-        public string? WhomMess { get; set; }
+        public string? Topic { get; set; }
+        public string? MailMess { get; set; }
+        public string? IdHow { get; set; }
+        public string? IdWhom { get; set; }
     }
 }
