@@ -30,7 +30,7 @@ namespace MailClient
         private void Out_Click(object sender, RoutedEventArgs e)
         {
             Check checkUser = new Check();
-            bool b = checkUser.Checks(MailName.Text, PasswordText.Password, "+");
+            bool b = checkUser.Checks(MailName.Text+NameMail.Text, PasswordText.Password, "+");
             if (b == true)
             {
                 MailContent open = new MailContent(MailName.Text);
@@ -48,7 +48,7 @@ namespace MailClient
         private void Reg_Click(object sender, RoutedEventArgs e)
         {
             Check checkUser = new Check();
-            bool b = checkUser.Checks(MailName.Text, PasswordText.Password, "AddUser");
+            bool b = checkUser.Checks(MailName.Text + NameMail.Text, PasswordText.Password, "AddUser");
             if (b == true)
             {
                 MessageBox.Show("Успешная регестрация!!!");

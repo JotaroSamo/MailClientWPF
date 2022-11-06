@@ -68,10 +68,10 @@ namespace MailClient
 
         private void SendMessage(object sender, RoutedEventArgs e)
         {
-            MessegeMail mail = new MessegeMail() { DateTime = DateTime.Now, Topic = Tbox.Text, MailMessssage = Mbox.Text, IdHow = Mail, IdWhom = Hbox.Text };
+            MessegeMail mail = new MessegeMail() { DateTime = DateTime.Now, Topic = Tbox.Text, MailMess = Mbox.Text, IdHow = Mail, IdWhom = Hbox.Text };
             string m = JsonSerializer.Serialize(mail);
             TCPClient tCPClient = new TCPClient();
-            tCPClient.Tcpclient(m);
+            tCPClient.Tcpclient("Save data" + "`" + m);
         }
     }
 }
