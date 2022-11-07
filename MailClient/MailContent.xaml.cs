@@ -38,25 +38,25 @@ namespace MailClient
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            //GetData getData = new GetData();
-            //var mail = JsonSerializer.Deserialize<MessegeMail[]>(getData.GetDatas(Mail));
-            //messegeMail = new BindingList<MessegeMail>();
-            //{
-            //    MessegeMail[] mails = mail;
-            //    foreach (var c in mail)
-            //    {
-            //        new MessegeMail()
-            //        {
-            //            Id = c.Id,
-            //            DateTime = c.DateTime,
-            //            Topic = c.Topic,
-            //            MailMess = c.MailMess,
-            //            IdHow = c.IdHow,
-            //            IdWhom = c.IdWhom
-            //        };
-            //    }
-            //};
-            //OutMess.ItemsSource = messegeMail;
+            GetData getData = new GetData();
+            var mail = JsonSerializer.Deserialize<MessegeMail[]>(getData.GetDatas(Mail));
+            messegeMail = new BindingList<MessegeMail>();
+            {
+                MessegeMail[] mails = mail;
+                foreach (var c in mail)
+                {
+                    new MessegeMail()
+                    {
+                        Id = c.Id,
+                        DateTime = c.DateTime,
+                        Topic = c.Topic,
+                        MailMess = c.MailMess,
+                        IdHow = c.IdHow,
+                        IdWhom = c.IdWhom
+                    };
+                }
+            };
+            OutMess.ItemsSource = messegeMail;
 
 
         }
