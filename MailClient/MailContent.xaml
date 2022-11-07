@@ -20,7 +20,7 @@
                         <DataGrid.Columns  >
                             <DataGridTextColumn Binding="{Binding Path= Id}" IsReadOnly="True" Header="ID" Width="25" />
                             <DataGridTextColumn Binding="{Binding Path= DateTime}" IsReadOnly="True" Header="Дата" Width="100"/>
-                            <DataGridTextColumn Binding="{Binding Path= HowMess}"  IsReadOnly="True" Header="От кого" Width="*"/>
+                            <DataGridTextColumn Binding="{Binding Path= IdHow}"  IsReadOnly="True" Header="От кого" Width="*"/>
                             <DataGridTextColumn Binding="{Binding Path= Topic}"  Header="Тема" Width="*"/>
                         </DataGrid.Columns>
                     </DataGrid>
@@ -42,10 +42,10 @@
                     </Grid.ColumnDefinitions>
                     <DataGrid  Margin="10,0,445,69" BorderBrush="Red" x:Name="SendMessCheck">
                         <DataGrid.Columns  >
-                            <DataGridTextColumn x:Name="IDs" IsReadOnly="True" Header="ID" Width="25" />
-                            <DataGridTextColumn  x:Name="Dates" IsReadOnly="True" Header="Дата" Width="100"/>
-                            <DataGridTextColumn x:Name="Whom" IsReadOnly="True" Header="От кого" Width="*"/>
-                            <DataGridTextColumn x:Name="Topics" Header="Тема" Width="*"/>
+                            <DataGridTextColumn  Binding="{Binding Path= Id}"  IsReadOnly="True" Header="ID" Width="25" />
+                            <DataGridTextColumn  Binding="{Binding Path= DateTime}" IsReadOnly="True" Header="Дата" Width="100"/>
+                            <DataGridTextColumn Binding="{Binding Path= IdWhom}" IsReadOnly="True" Header="От кого" Width="*"/>
+                            <DataGridTextColumn  Binding="{Binding Path= Topic}" Header="Тема" Width="*"/>
                         </DataGrid.Columns>
                     </DataGrid>
                     <TextBox x:Name="Sendblock" HorizontalAlignment="Left" Margin="425,0,0,0" TextWrapping="Wrap" IsReadOnly="True" VerticalAlignment="Top" Width="400" Height="381" BorderBrush="Red"/>
@@ -56,16 +56,24 @@
         </TabItem>
         <TabItem x:Name="SendMess">
             <TabItem.Header>
-                <TextBlock Height="19" Width="87" HorizontalAlignment="Center">Исходящие</TextBlock>
+                <TextBlock Height="19" Width="87" HorizontalAlignment="Center">Отправить</TextBlock>
             </TabItem.Header>
             <TabItem.Content>
                 <Grid Height="450" Width="850" >
-                    <TextBox HorizontalAlignment="Center" Margin="0,78,0,0" TextWrapping="Wrap" Text="TextBox" Width="806" BorderBrush="#FF0441F7" Height="208" VerticalAlignment="Top" x:Name="Mbox"/>
-                    <TextBox HorizontalAlignment="Center" Margin="0,38,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="160" Height="35" x:Name="Tbox"/>
-                    <TextBox HorizontalAlignment="Left" Margin="22,38,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="290" Height="35" x:Name="Hbox"/>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="163*"/>
+                        <ColumnDefinition Width="262*"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBox HorizontalAlignment="Left" Margin="22,78,0,0" TextWrapping="Wrap"  Width="806" BorderBrush="#FF0441F7" Height="208" VerticalAlignment="Top" x:Name="Mbox" Grid.ColumnSpan="2"/>
+                    <TextBox HorizontalAlignment="Left" Margin="175,38,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="160" Height="35" x:Name="Tbox" Grid.Column="1"/>
+                    <TextBox HorizontalAlignment="Left" Margin="22,38,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="176" Height="35" x:Name="Hbox"/>
                     <Label Content="Кому" HorizontalAlignment="Left" Margin="22,7,0,0" VerticalAlignment="Top"/>
-                    <Label Content="Тема" HorizontalAlignment="Left" Margin="345,12,0,0" VerticalAlignment="Top"/>
-                    <Button Content="Отправить" HorizontalAlignment="Center" Margin="0,324,0,0" VerticalAlignment="Top" Width="806" Click="SendMessage" />
+                    <Label Content="Тема" HorizontalAlignment="Left" Margin="175,7,0,0" VerticalAlignment="Top" Grid.Column="1"/>
+                    <Button Content="Отправить" HorizontalAlignment="Left" Margin="22,324,0,0" VerticalAlignment="Top" Width="806" Click="SendMessage" Grid.ColumnSpan="2" />
+                    <ComboBox x:Name="MailAdress" HorizontalAlignment="Left" Margin="203,38,0,0" VerticalAlignment="Top" Width="136" Height="35" Grid.ColumnSpan="2">
+                        <ListBoxItem Content="@gmail.com"/>
+                        <ListBoxItem Content="@mail.ru"/>
+                    </ComboBox>
 
                 </Grid>
             </TabItem.Content>

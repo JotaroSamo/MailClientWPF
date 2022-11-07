@@ -29,32 +29,32 @@ namespace MailClient
         private BindingList<MessegeMail> messegeMail;
         public MailContent(string Mail)
         {
-           
+
             InitializeComponent();
             this.Mail = Mail;
-            
-            
+
+
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             //GetData getData = new GetData();
-            //var mail= JsonSerializer.Deserialize<MessegeMail[]>(getData.GetDatas(Mail));
+            //var mail = JsonSerializer.Deserialize<MessegeMail[]>(getData.GetDatas(Mail));
             //messegeMail = new BindingList<MessegeMail>();
             //{
             //    MessegeMail[] mails = mail;
-            //    //foreach (var c in mail)
-            //    //{
-            //    //    new MessegeMail()
-            //    //    {
-            //    //    Id =c.Id,
-            //    //    DateTime=c.DateTime,
-            //    //    Topic=c.Topic,
-            //    //    Message = c.Messegr,
-            //    //    HowMess=c.HowMess,
-            //    //    WhomMess=c.WhomMess
-            //    //    };
-            //    //}
+            //    foreach (var c in mail)
+            //    {
+            //        new MessegeMail()
+            //        {
+            //            Id = c.Id,
+            //            DateTime = c.DateTime,
+            //            Topic = c.Topic,
+            //            MailMess = c.MailMess,
+            //            IdHow = c.IdHow,
+            //            IdWhom = c.IdWhom
+            //        };
+            //    }
             //};
             //OutMess.ItemsSource = messegeMail;
 
@@ -63,12 +63,12 @@ namespace MailClient
 
         private void ReciveSend_Loaded(object sender, RoutedEventArgs e)
         {
-            
+
         }
 
         private void SendMessage(object sender, RoutedEventArgs e)
         {
-            MessegeMail mail = new MessegeMail() { DateTime = DateTime.Now, Topic = Tbox.Text, MailMess = Mbox.Text, IdHow = Mail, IdWhom = Hbox.Text };
+            MessegeMail mail = new MessegeMail() { DateTime = DateTime.Now, Topic = Tbox.Text, MailMess = Mbox.Text, IdHow = Mail, IdWhom = Hbox.Text + MailAdress.Text };
             string m = JsonSerializer.Serialize(mail);
             TCPClient tCPClient = new TCPClient();
             tCPClient.Tcpclient("Save data" + "`" + m);

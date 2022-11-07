@@ -33,7 +33,7 @@ namespace MailClient
             bool b = checkUser.Checks(MailName.Text+NameMail.Text, PasswordText.Password, "+");
             if (b == true)
             {
-                MailContent open = new MailContent(MailName.Text);
+                MailContent open = new MailContent(MailName.Text + NameMail.Text);
                 open.Show();
                 //this.Hide();
             }

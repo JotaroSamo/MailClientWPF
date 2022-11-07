@@ -11,7 +11,7 @@ namespace MailClient.Network.Methods
         public string GetDatas(string Mail)
         {
             TCPClient tCP = new TCPClient();
-            return tCP.Tcpclient(Mail);
+            return tCP.Tcpclient("Get data" + "`"+Mail);
         }
     }
 }
