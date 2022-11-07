@@ -28,7 +28,7 @@ namespace MailClient.Network
                 client = new TcpClient(address, port);
                 NetworkStream stream = client.GetStream();
                 byte[] data;
-                while (true)
+                 while (true)
                 {
 
                     data = Encoding.Unicode.GetBytes(mess);

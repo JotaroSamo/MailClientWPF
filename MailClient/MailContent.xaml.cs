@@ -8,6 +8,7 @@ using System.Linq;
 using System.Net.Mail;
 using System.Text;
 using System.Text.Json;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -26,7 +27,7 @@ namespace MailClient
     public partial class MailContent : Window
     {
         string Mail;
-        private BindingList<MessegeMail> messegeMail;
+        //private BindingList<MessegeMail> messegeMail;
         public MailContent(string Mail)
         {
 
@@ -38,40 +39,13 @@ namespace MailClient
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            try
-            {
-                GetData getData = new GetData();
-                var mail = JsonSerializer.Deserialize<MessegeMail[]>(getData.GetDatas(Mail));
-                messegeMail = new BindingList<MessegeMail>();
-                {
-                    MessegeMail[] mails = mail;
-                    foreach (var c in mail)
-                    {
-                        new MessegeMail()
-                        {
-                            Id = c.Id,
-                            DateTime = c.DateTime,
-                            Topic = c.Topic,
-                            MailMess = c.MailMess,
-                            IdHow = c.IdHow,
-                            IdWhom = c.IdWhom
-                        };
-                    }
-                };
-                OutMess.ItemsSource = messegeMail;
-            }
-            catch (Exception ex)
-            {
-              
-              
-            }
+                
+
+            UpdateData();
+           
            
         }
 
-        private void ReciveSend_Loaded(object sender, RoutedEventArgs e)
-        {
-
-        }
 
         private void SendMessage(object sender, RoutedEventArgs e)
         {
@@ -79,6 +53,20 @@ namespace MailClient
             string m = JsonSerializer.Serialize(mail);
             TCPClient tCPClient = new TCPClient();
             tCPClient.Tcpclient("Save data" + "`" + m);
+        }
+        public void UpdateData()
+        {
+            try
+            {
+                GetData getData = new GetData();
+                var mail = JsonSerializer.Deserialize<MessegeMail[]>(getData.GetDatasH(Mail));
+                OutMess.ItemsSource = mail;
+            }
+            catch (Exception ex)
+            {
+
+
+            }
         }
     }
 }

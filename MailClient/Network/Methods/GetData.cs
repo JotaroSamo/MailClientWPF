@@ -8,10 +8,15 @@ namespace MailClient.Network.Methods
 {
     public class GetData
     {
-        public string GetDatas(string Mail)
+        public string GetDatasH(string Mail)
         {
             TCPClient tCP = new TCPClient();
-            return tCP.Tcpclient("Get data" + "`"+Mail);
+            return tCP.Tcpclient("Get Data" + "`"+Mail);
+        }
+        public string GetDatasW(string Mail)
+        {
+            TCPClient tCP = new TCPClient();
+            return tCP.Tcpclient("Get DataW" + "`" + Mail);
         }
     }
 }

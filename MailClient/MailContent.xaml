@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:MailClient"
         mc:Ignorable="d"
         Title="Почта" Height="450" Width="850" Loaded="Window_Loaded">
-    <TabControl x:Name="ReciveSend" Height="450" Width="850" Loaded="ReciveSend_Loaded">
+    <TabControl x:Name="ReciveSend" Height="450" Width="850">
         <TabItem x:Name="Mess">
             <TabItem.Header>
                 <TextBlock Height="19" Width="132" HorizontalAlignment="Center">Входящие</TextBlock>
@@ -21,34 +21,12 @@
                             <DataGridTextColumn Binding="{Binding Path= Id}" IsReadOnly="True" Header="ID" Width="25" />
                             <DataGridTextColumn Binding="{Binding Path= DateTime}" IsReadOnly="True" Header="Дата" Width="100"/>
                             <DataGridTextColumn Binding="{Binding Path= IdHow}"  IsReadOnly="True" Header="От кого" Width="*"/>
+                            <DataGridTextColumn Binding="{Binding Path= IdWhom}"  IsReadOnly="True" Header="Кому" Width="*"/>
                             <DataGridTextColumn Binding="{Binding Path= Topic}"  Header="Тема" Width="*"/>
                         </DataGrid.Columns>
                     </DataGrid>
                     <TextBox x:Name="Outblock" HorizontalAlignment="Left" Margin="425,0,0,0" TextWrapping="Wrap" IsReadOnly="True" VerticalAlignment="Top" Width="400" Height="381" BorderBrush="Red"/>
 
-
-
-                </Grid>
-            </TabItem.Content>
-        </TabItem>
-        <TabItem x:Name="Send">
-            <TabItem.Header>
-                <TextBlock Height="19" Width="87" HorizontalAlignment="Center">Исходящие</TextBlock>
-            </TabItem.Header>
-            <TabItem.Content>
-                <Grid  Height="450" Width="850" >
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition/>
-                    </Grid.ColumnDefinitions>
-                    <DataGrid  Margin="10,0,445,69" BorderBrush="Red" x:Name="SendMessCheck">
-                        <DataGrid.Columns  >
-                            <DataGridTextColumn  Binding="{Binding Path= Id}"  IsReadOnly="True" Header="ID" Width="25" />
-                            <DataGridTextColumn  Binding="{Binding Path= DateTime}" IsReadOnly="True" Header="Дата" Width="100"/>
-                            <DataGridTextColumn Binding="{Binding Path= IdWhom}" IsReadOnly="True" Header="От кого" Width="*"/>
-                            <DataGridTextColumn  Binding="{Binding Path= Topic}" Header="Тема" Width="*"/>
-                        </DataGrid.Columns>
-                    </DataGrid>
-                    <TextBox x:Name="Sendblock" HorizontalAlignment="Left" Margin="425,0,0,0" TextWrapping="Wrap" IsReadOnly="True" VerticalAlignment="Top" Width="400" Height="381" BorderBrush="Red"/>
 
 
                 </Grid>
