@@ -5,26 +5,32 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MailClient"
         mc:Ignorable="d"
-        Title="Authorization" Height="235" Width="548">
+        Title="Authorization" Height="265" Width="547" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" >
+    <Window.Background>
+        <ImageBrush ImageSource="/Back.jpg"/>
+    </Window.Background>
 
-    <Grid Height="212" VerticalAlignment="Top" Margin="0,0,10,0" >
-        <TextBox x:Name="MailName" Margin="60,30,155,162"   RenderTransformOrigin="0.5,3.5" Height="20"  HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
-        <PasswordBox x:Name="PasswordText" RenderTransformOrigin="0.5,3.5" Height="20"  HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="60,57,51,135"/>
-        <Button Margin="60,85,333,7" Content="Enter" Click="Out_Click" Foreground="White" BorderBrush="Red" FontFamily="Comic Sans MS" FontSize="24" >
+    <Grid Height="229" VerticalAlignment="Top" Margin="0,0,10,0" >
+        <Grid.Background>
+            <ImageBrush ImageSource="/Back.jpg"/>
+        </Grid.Background>
+        <TextBox x:Name="MailName" Margin="60,29,155,180"   RenderTransformOrigin="0.5,3.5" Height="20"  HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="#FF6E0DD0" Foreground="Lime" />
+        <PasswordBox x:Name="PasswordText" RenderTransformOrigin="0.5,3.5" Height="20"  HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="60,57,51,135" Background="#FF6E0DD0" Foreground="Lime"/>
+        <Button Margin="60,92,268,10" Content="Enter" Click="Out_Click" Foreground="White" BorderBrush="Red" FontFamily="Comic Sans MS" FontSize="24" >
             <Button.Background>
-                <ImageBrush ImageSource="/Items/Gays.png"/>
+                <ImageBrush ImageSource="/Gays.png" TileMode="Tile" Stretch="Fill"/>
             </Button.Background>
         </Button>
-        <Button Margin="337,82,60,10" Content="Registration" Click="Reg_Click" Foreground="White" FontFamily="Comic Sans MS" FontSize="18" BorderBrush="#FF0004FF" >
+        <Button Margin="274,92,51,9" Content="Registration" Click="Reg_Click" Foreground="White" FontFamily="Comic Sans MS" FontSize="18" BorderBrush="#FF0004FF" >
             <Button.Background>
-                <ImageBrush ImageSource="/Items/Reg.jpg"/>
+                <ImageBrush ImageSource="/Reg.jpg"/>
             </Button.Background>
         </Button>
-        <ComboBox x:Name="NameMail" HorizontalAlignment="Left" Margin="388,30,0,0" VerticalAlignment="Top" Width="90" RenderTransformOrigin="0.478,0.528">
+        <ComboBox x:Name="NameMail" Text="@gmail.com" HorizontalAlignment="Left" Margin="382,28,0,0" VerticalAlignment="Top" Width="90" RenderTransformOrigin="0.478,0.528" BorderBrush="#FF6E0DD0" Background="#FF6E0DD0" Foreground="#FF6E0DD0">
             <ListBoxItem Content="@gmail.com"/>
             <ListBoxItem Content="@mail.ru"/>
         </ComboBox>
-        <Label Content="Mail" HorizontalAlignment="Left" Margin="10,27,0,0" VerticalAlignment="Top" Height="23" Width="45"/>
-        <Label Content="Pass" HorizontalAlignment="Left" Margin="10,54,0,0" VerticalAlignment="Top" Width="62"/>
+        <Label Content="Mail" HorizontalAlignment="Left" Margin="14,24,0,0" VerticalAlignment="Top" Height="29" Width="46" FontFamily="Comic Sans MS" FontSize="14" Foreground="White"/>
+        <Label Content="Pass" HorizontalAlignment="Left" Margin="14,58,0,0" VerticalAlignment="Top" Width="62" Foreground="White" FontFamily="Comic Sans MS" FontSize="14"/>
     </Grid>
 </Window>

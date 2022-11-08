@@ -5,11 +5,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MailClient"
         mc:Ignorable="d"
-        Title="Mail" Height="482" Width="1128" Loaded="Window_Loaded">
-    <TabControl x:Name="ReciveSend" Height="450" Margin="10,8,0,8" HorizontalAlignment="Left" Width="1108">
-        <TabItem x:Name="Mess">
+        Title="Mail" Height="514" Width="1128" Loaded="Window_Loaded" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Window.Background>
+        <ImageBrush ImageSource="/Back.jpg"/>
+    </Window.Background>
+    <TabControl x:Name="ReciveSend" Margin="0,0,0,-6" HorizontalAlignment="Center" Width="1128">
+        <TabControl.Background>
+            <ImageBrush ImageSource="/Back.jpg"/>
+        </TabControl.Background>
+        <TabItem x:Name="Mess" Background="#FFFF00CC">
             <TabItem.Header>
-                <TextBlock Height="19" Width="132" HorizontalAlignment="Center">Inbox</TextBlock>
+                <TextBlock Height="25" Width="164" HorizontalAlignment="Center" Background="#FFFF00CC" Foreground="Lime" FontFamily="Comic Sans MS" FontSize="18">Inbox</TextBlock>
             </TabItem.Header>
             <TabItem.Content>
                 <Grid  Height="462" RenderTransformOrigin="0.5,0.5" Margin="6,0,-1,0" >
@@ -24,20 +30,30 @@
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
-                    <DataGrid x:Name="OutMess" Margin="8,0,447,69" BorderBrush="Red" AutoGenerateColumns="False" MouseUp="OutMess_MouseUp" >
+                    <DataGrid x:Name="OutMess" Margin="-4,0,467,29" AutoGenerateColumns="False" MouseUp="OutMess_MouseUp" FontFamily="Comic Sans MS" FontSize="14" >
+                        <DataGrid.BorderBrush>
+                            <ImageBrush/>
+                        </DataGrid.BorderBrush>
+                        <DataGrid.Background>
+                            <ImageBrush/>
+                        </DataGrid.Background>
                         <DataGrid.Columns  >
-                            <DataGridTextColumn Binding="{Binding Path= Id}" IsReadOnly="True" Header="ID" Width="25" />
-                            <DataGridTextColumn Binding="{Binding Path= DateTime}" IsReadOnly="True" Header="Date" Width="100"/>
+                            <DataGridTextColumn Binding="{Binding Path= Id}" IsReadOnly="True" Header="ID" Width="30" />
+                            <DataGridTextColumn Binding="{Binding Path= DateTime}" IsReadOnly="True" Header="Date" Width="140"/>
                             <DataGridTextColumn Binding="{Binding Path= IdHow}"  IsReadOnly="True" Header="From" Width="*"/>
                             <DataGridTextColumn Binding="{Binding Path= IdWhom}"  IsReadOnly="True" Header="To" Width="*"/>
                             <DataGridTextColumn Binding="{Binding Path= Topic}"  Header="Topic" Width="*"/>
                         </DataGrid.Columns>
                     </DataGrid>
-                    <TextBox x:Name="Outblock" Margin="715,2,13,0" TextWrapping="Wrap" IsReadOnly="True" VerticalAlignment="Top" Height="390" BorderBrush="Red"/>
-                    <Button Content="Refresh" HorizontalAlignment="Left" Margin="658,0,0,0" VerticalAlignment="Top" Height="25" Background="White" BorderBrush="#FF001BFF" Foreground="#FF1F00FF" Click="Button_Click" Width="51"/>
-                    <Button  HorizontalAlignment="Left" Margin="661,289,0,0" VerticalAlignment="Top" Height="102" Width="45">
+                    <TextBox x:Name="Outblock" Margin="715,2,13,0" TextWrapping="Wrap" IsReadOnly="True" VerticalAlignment="Top" Height="431" BorderBrush="Red" Background="Cyan" Foreground="#FF9D00FF"/>
+                    <Button HorizontalAlignment="Left" Margin="658,0,0,0" VerticalAlignment="Top" Height="59" BorderBrush="#FF001BFF" Click="Button_Click" Width="51" Foreground="Red" FontFamily="Comic Sans MS">
                         <Button.Background>
-                            <ImageBrush ImageSource="/Items/Gay.jpg" Stretch="UniformToFill"/>
+                            <ImageBrush ImageSource="/Ref.png"/>
+                        </Button.Background>
+                    </Button>
+                    <Button  HorizontalAlignment="Left" Margin="656,324,0,0" VerticalAlignment="Top" Height="105" Width="50" Foreground="Red" FontFamily="Comic Sans MS" FontSize="18" Click="Out">
+                        <Button.Background>
+                            <ImageBrush ImageSource="/Gay.jpg" Stretch="UniformToFill"/>
                         </Button.Background>
                     </Button>
 
@@ -49,7 +65,7 @@
         <TabItem x:Name="SendMess">
             <TabItem.Header>
 
-                <TextBlock Height="19" Width="87" HorizontalAlignment="Center">Send message</TextBlock>
+                <TextBlock Height="28" Width="167" HorizontalAlignment="Center" FontFamily="Comic Sans MS" Foreground="Lime" Background="Magenta" FontSize="18">Send message</TextBlock>
             </TabItem.Header>
             <TabItem.Content>
                 <Grid Height="450" Width="850" >
@@ -57,13 +73,13 @@
                         <ColumnDefinition Width="163*"/>
                         <ColumnDefinition Width="262*"/>
                     </Grid.ColumnDefinitions>
-                    <TextBox HorizontalAlignment="Left" Margin="22,78,0,0" TextWrapping="Wrap"  Width="806" BorderBrush="#FF0441F7" Height="208" VerticalAlignment="Top" x:Name="Mbox" Grid.ColumnSpan="2"/>
-                    <TextBox HorizontalAlignment="Left" Margin="175,38,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="160" Height="35" x:Name="Tbox" Grid.Column="1"/>
-                    <TextBox HorizontalAlignment="Left" Margin="22,38,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="176" Height="35" x:Name="Hbox"/>
+                    <TextBox HorizontalAlignment="Left" Margin="22,78,0,0" TextWrapping="Wrap"  Width="806" BorderBrush="#FF0441F7" Height="208" VerticalAlignment="Top" x:Name="Mbox" Grid.ColumnSpan="2" Background="Cyan" Foreground="#FF9D00FF" FontFamily="Comic Sans MS" FontSize="16"/>
+                    <TextBox HorizontalAlignment="Left" Margin="175,38,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="160" Height="35" x:Name="Tbox" Grid.Column="1" Foreground="#FF9D00FF" Background="Cyan" FontFamily="Comic Sans MS" FontSize="16"/>
+                    <TextBox HorizontalAlignment="Left" Margin="22,38,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="176" Height="35" x:Name="Hbox" Background="Cyan" FontFamily="Comic Sans MS" FontSize="16" Foreground="#FF9D00FF"/>
                     <Label Content="Whom" HorizontalAlignment="Left" Margin="22,7,0,0" VerticalAlignment="Top"/>
                     <Label Content="Topic" HorizontalAlignment="Left" Margin="175,7,0,0" VerticalAlignment="Top" Grid.Column="1"/>
-                    <Button Content="Send" HorizontalAlignment="Left" Margin="22,324,0,0" VerticalAlignment="Top" Width="806" Click="SendMessage" Grid.ColumnSpan="2" />
-                    <ComboBox x:Name="MailAdress" HorizontalAlignment="Left" Margin="203,38,0,0" VerticalAlignment="Top" Width="136" Height="35" Grid.ColumnSpan="2">
+                    <Button Content="Send" HorizontalAlignment="Left" Margin="22,324,0,0" VerticalAlignment="Top" Width="806" Click="SendMessage" Grid.ColumnSpan="2" Background="Red" Foreground="#FFE6FB04" FontFamily="Comic Sans MS" FontSize="18" />
+                    <ComboBox x:Name="MailAdress" HorizontalAlignment="Left" Margin="203,38,0,0" VerticalAlignment="Top" Width="136" Height="35" Grid.ColumnSpan="2" FontFamily="Comic Sans MS" FontSize="16">
                         <ListBoxItem Content="@gmail.com"/>
                         <ListBoxItem Content="@mail.ru"/>
                     </ComboBox>

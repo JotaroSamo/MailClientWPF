@@ -9,7 +9,25 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Back.jpg" />
+    <None Remove="Del.png" />
+    <None Remove="Gay.jpg" />
+    <None Remove="Gays.png" />
+    <None Remove="Ref.png" />
+    <None Remove="reg.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Content Include="Items\MailIcon.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Back.jpg" />
+    <Resource Include="Del.png" />
+    <Resource Include="Gay.jpg" />
+    <Resource Include="Gays.png" />
+    <Resource Include="Ref.png" />
+    <Resource Include="reg.jpg" />
   </ItemGroup>
 
 </Project>

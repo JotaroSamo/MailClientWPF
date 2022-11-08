@@ -15,6 +15,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+
 namespace MailClient
 {
     /// <summary>
@@ -35,14 +36,13 @@ namespace MailClient
             {
                 MailContent open = new MailContent(MailName.Text + NameMail.Text);
                 open.Show();
-                this.Hide();
+                this.Close();
             }
             if (b == false)
             {
                 MessageBox.Show("Incorrect login or password!!!");
             }
-            //MailContent open = new MailContent(MailName.Text);
-            //open.Show();
+
         }
 
         private void Reg_Click(object sender, RoutedEventArgs e)
