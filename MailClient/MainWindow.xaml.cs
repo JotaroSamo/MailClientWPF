@@ -35,11 +35,11 @@ namespace MailClient
             {
                 MailContent open = new MailContent(MailName.Text + NameMail.Text);
                 open.Show();
-                //this.Hide();
+                this.Hide();
             }
             if (b == false)
             {
-                MessageBox.Show("Не правельный логин или пароль!!!");
+                MessageBox.Show("Incorrect login or password!!!");
             }
             //MailContent open = new MailContent(MailName.Text);
             //open.Show();
@@ -51,11 +51,11 @@ namespace MailClient
             bool b = checkUser.Checks(MailName.Text + NameMail.Text, PasswordText.Password, "AddUser");
             if (b == true)
             {
-                MessageBox.Show("Успешная регестрация!!!");
+                MessageBox.Show("Successful registration!!");
             }
             if (b == false)
             {
-                MessageBox.Show("Такой польщователь существует!!!");
+                MessageBox.Show("Such a user exists!");
             }
         }
     }

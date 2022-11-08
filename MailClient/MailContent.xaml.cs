@@ -33,16 +33,14 @@ namespace MailClient
 
             InitializeComponent();
             this.Mail = Mail;
-
+          
 
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-                
-
-            UpdateData();
            
+           UpdateData();
            
         }
 
@@ -67,6 +65,26 @@ namespace MailClient
 
 
             }
+        }
+
+        private void OutMess_MouseUp(object sender, MouseButtonEventArgs e)
+        {
+            try
+            {
+                MessegeMail? messegeMail = OutMess.SelectedItem as MessegeMail;
+                Outblock.Text = messegeMail?.MailMess;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            UpdateData();
         }
     }
 }
