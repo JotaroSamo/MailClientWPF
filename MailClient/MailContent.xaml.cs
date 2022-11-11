@@ -51,6 +51,7 @@ namespace MailClient
             string m = JsonSerializer.Serialize(mail);
             TCPClient tCPClient = new TCPClient();
             tCPClient.Tcpclient("Save data" + "`" + m);
+            UpdateData();
         }
         public void UpdateData()
         {
@@ -87,16 +88,19 @@ namespace MailClient
             UpdateData();
         }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
-        {
-
-        }
-
         private void Out(object sender, RoutedEventArgs e)
         {
             MainWindow main = new MainWindow();
             main.Show();
             this.Close();
+        }
+
+        private void Delete(object sender, RoutedEventArgs e)
+        {
+            MessegeMail? messegeMail = OutMess.SelectedItem as MessegeMail;
+            TCPClient tCPClient = new TCPClient();
+            tCPClient.Tcpclient("Delete" + "`" + messegeMail?.Id);
+            UpdateData();
         }
     }
 }

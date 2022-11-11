@@ -20,7 +20,7 @@ namespace MailClient.Network
         public string Tcpclient(string mess)
         {
             string Host = Dns.GetHostName();
-            string address = Dns.GetHostEntry(Host).AddressList[2].ToString();
+            string address = Dns.GetHostEntry(Host).AddressList[1].ToString();
             TcpClient? client = null;
             try
             {
