@@ -76,6 +76,9 @@
                         </TextBox.SelectionBrush>
                     </TextBox>
                     <Button HorizontalAlignment="Left" Margin="754,-3,0,0" VerticalAlignment="Top" Height="60" Click="Button_Click" Width="50" Foreground="Red" FontFamily="Comic Sans MS">
+                        <Button.Effect>
+                            <DropShadowEffect/>
+                        </Button.Effect>
                         <Button.BorderBrush>
                             <ImageBrush/>
                         </Button.BorderBrush>
@@ -84,15 +87,21 @@
                         </Button.Background>
                     </Button>
                     <Button  HorizontalAlignment="Left" Margin="754,116,0,0" VerticalAlignment="Top" Height="60" Width="50" FontFamily="Comic Sans MS" FontSize="18" Click="Out">
+                        <Button.Effect>
+                            <DropShadowEffect/>
+                        </Button.Effect>
                         <Button.BorderBrush>
                             <ImageBrush/>
                         </Button.BorderBrush>
                         <Button.Background>
-                            <ImageBrush ImageSource="/Out.png"/>
+                            <ImageBrush ImageSource="/Out.png" Stretch="Uniform"/>
                         </Button.Background>
 
                     </Button>
                     <Button HorizontalAlignment="Left" Margin="754,57,0,0" VerticalAlignment="Top" Height="60" Click="Delete" Width="50" Foreground="Red" FontFamily="Comic Sans MS">
+                        <Button.Effect>
+                            <DropShadowEffect/>
+                        </Button.Effect>
                         <Button.BorderBrush>
                             <ImageBrush/>
                         </Button.BorderBrush>
@@ -110,6 +119,9 @@
             <TabItem.Header>
 
                 <TextBlock Height="28" Width="167" HorizontalAlignment="Center" FontFamily="Comic Sans MS" FontSize="18">
+                    <TextBlock.Effect>
+                        <DropShadowEffect/>
+                    </TextBlock.Effect>
                     <TextBlock.Background>
                         <ImageBrush Stretch="Uniform" ImageSource="/Write.png"/>
                     </TextBlock.Background>
@@ -124,6 +136,9 @@
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
                     <TextBox HorizontalAlignment="Left" Margin="31,78,0,0" TextWrapping="Wrap"  Width="494" Height="359" VerticalAlignment="Top" x:Name="Mbox" FontFamily="Comic Sans MS" FontSize="16" BorderBrush="Red">
+                        <TextBox.Effect>
+                            <DropShadowEffect/>
+                        </TextBox.Effect>
                         <TextBox.Background>
                             <ImageBrush/>
                         </TextBox.Background>
@@ -143,7 +158,14 @@
                     </TextBox>
                     <Label Content="Whom" HorizontalAlignment="Left" Margin="31,8,0,0" VerticalAlignment="Top" FontFamily="Comic Sans MS" FontSize="18" Foreground="#FFFF000C" FontWeight="Bold" FontStyle="Italic"/>
                     <Label Content="Topic" HorizontalAlignment="Left" Margin="365,10,0,0" VerticalAlignment="Top" Background="#00000000" Foreground="#FFFF000C" FontFamily="Comic Sans MS" FontWeight="Bold" FontStyle="Italic" FontSize="16"/>
-                    <Button Content="Send" HorizontalAlignment="Left" Margin="530,404,0,0" VerticalAlignment="Top" Width="551" Click="SendMessage" FontFamily="Comic Sans MS" FontSize="18" Height="33" BorderBrush="#FF00D6FF" Background="#FFFFA4A4" FontWeight="Bold" FontStyle="Italic" Foreground="#FF0084FF" />
+                    <Button HorizontalAlignment="Left" Margin="525,400,0,0" VerticalAlignment="Top" Width="53" Click="SendMessage" FontFamily="Comic Sans MS" FontSize="18" Height="37" FontWeight="Bold" FontStyle="Italic" >
+                        <Button.Background>
+                            <ImageBrush ImageSource="/Send.png" Stretch="Uniform"/>
+                        </Button.Background>
+                        <Button.BorderBrush>
+                            <ImageBrush/>
+                        </Button.BorderBrush>
+                    </Button>
                     <ComboBox x:Name="MailAdress" HorizontalAlignment="Left" Margin="203,38,0,0" VerticalAlignment="Top" Width="136" Height="35" FontFamily="Comic Sans MS" FontSize="16">
                         <ListBoxItem Content="@gmail.com"/>
                         <ListBoxItem Content="@mail.ru"/>

@@ -13,9 +13,12 @@
     <None Remove="BackContentRecive.jpg" />
     <None Remove="BackGround.jpg" />
     <None Remove="Del.png" />
+    <None Remove="Enter.png" />
     <None Remove="Input.png" />
     <None Remove="Out.png" />
     <None Remove="Refresh.png" />
+    <None Remove="Registration.png" />
+    <None Remove="Send.png" />
     <None Remove="Write.png" />
   </ItemGroup>
 
@@ -28,9 +31,12 @@
     <Resource Include="BackContentRecive.jpg" />
     <Resource Include="BackGround.jpg" />
     <Resource Include="Del.png" />
+    <Resource Include="Enter.png" />
     <Resource Include="Input.png" />
     <Resource Include="Out.png" />
     <Resource Include="Refresh.png" />
+    <Resource Include="Registration.png" />
+    <Resource Include="Send.png" />
     <Resource Include="Write.png" />
   </ItemGroup>
 

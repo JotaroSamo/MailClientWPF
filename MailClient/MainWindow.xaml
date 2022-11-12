@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MailClient"
         mc:Ignorable="d"
-        Title="Authorization" Height="477" Width="859" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" >
+        Title="Authorization" Height="504" Width="850" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" >
     <Window.Background>
         <ImageBrush ImageSource="/BackGround.jpg" Stretch="UniformToFill"/>
     </Window.Background>
@@ -24,8 +24,28 @@
                 <ImageBrush/>
             </PasswordBox.SelectionBrush>
         </PasswordBox>
-        <Button Margin="110,309,0,0" Content="Enter" Click="Out_Click" FontFamily="Comic Sans MS" FontSize="24" HorizontalAlignment="Left" Width="250" Height="34" VerticalAlignment="Top" BorderBrush="#FFE600FF" Background="#FFFF6FAA" Foreground="White" />
-        <Button Margin="89,385,0,0" Content="Registration" Click="Reg_Click" FontFamily="Comic Sans MS" FontSize="18" HorizontalAlignment="Left" Width="292" Height="26" VerticalAlignment="Top" BorderBrush="#FFE600FF" Background="#FFFF6FAA" Foreground="White" />
+        <Button Click="Out_Click" FontFamily="Comic Sans MS" FontSize="24" HorizontalAlignment="Left" Width="50" Height="60" VerticalAlignment="Top" Margin="55,209,0,0" >
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+            <Button.BorderBrush>
+                <ImageBrush/>
+            </Button.BorderBrush>
+            <Button.Background>
+                <ImageBrush ImageSource="/Enter.png" Stretch="Uniform"/>
+            </Button.Background>
+        </Button>
+        <Button Margin="55,274,0,0" Click="Reg_Click" FontFamily="Comic Sans MS" FontSize="18" HorizontalAlignment="Left" Width="50" Height="60" VerticalAlignment="Top" RenderTransformOrigin="0.72,0.984" >
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+            <Button.Background>
+                <ImageBrush ImageSource="/Registration.png" Stretch="Uniform"/>
+            </Button.Background>
+            <Button.BorderBrush>
+                <ImageBrush/>
+            </Button.BorderBrush>
+        </Button>
         <ComboBox x:Name="NameMail" Text="@gmail.com" HorizontalAlignment="Right" Margin="0,93,54,0" VerticalAlignment="Top" Width="90" RenderTransformOrigin="0.478,0.528" Height="36" FontSize="16" FontFamily="Comic Sans MS" BorderBrush="#FFE600FF">
             <ListBoxItem Content="@gmail.com"/>
             <ListBoxItem Content="@mail.ru"/>
