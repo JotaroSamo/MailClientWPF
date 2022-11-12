@@ -9,12 +9,14 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Back.jpg" />
+    <None Remove="BackContent.jpg" />
+    <None Remove="BackContentRecive.jpg" />
+    <None Remove="BackGround.jpg" />
     <None Remove="Del.png" />
-    <None Remove="Gay.jpg" />
-    <None Remove="Gays.png" />
-    <None Remove="Ref.png" />
-    <None Remove="reg.jpg" />
+    <None Remove="Input.png" />
+    <None Remove="Out.png" />
+    <None Remove="Refresh.png" />
+    <None Remove="Write.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -22,12 +24,14 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="Back.jpg" />
+    <Resource Include="BackContent.jpg" />
+    <Resource Include="BackContentRecive.jpg" />
+    <Resource Include="BackGround.jpg" />
     <Resource Include="Del.png" />
-    <Resource Include="Gay.jpg" />
-    <Resource Include="Gays.png" />
-    <Resource Include="Ref.png" />
-    <Resource Include="reg.jpg" />
+    <Resource Include="Input.png" />
+    <Resource Include="Out.png" />
+    <Resource Include="Refresh.png" />
+    <Resource Include="Write.png" />
   </ItemGroup>
 
 </Project>
