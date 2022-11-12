@@ -14,12 +14,12 @@
         <Grid.Background>
             <ImageBrush/>
         </Grid.Background>
-        <TextBox x:Name="MailName" Margin="0,93,150,393"   RenderTransformOrigin="0.5,3.5"  HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Right" Width="278" FontSize="16" FontFamily="Comic Sans MS" BorderBrush="#FFCE00FF" Background="#FFFF6FAA" Foreground="White" Text="Mail" >
+        <TextBox x:Name="MailName" Margin="0,93,150,393"   RenderTransformOrigin="0.5,3.5"  HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Right" Width="292" FontSize="16" FontFamily="Comic Sans MS" BorderBrush="#FFCE00FF" Background="#FFFF6FAA" Foreground="White" Text="Mail" >
             <TextBox.SelectionBrush>
                 <ImageBrush/>
             </TextBox.SelectionBrush>
         </TextBox>
-        <PasswordBox x:Name="PasswordText" RenderTransformOrigin="0.5,3.5"  HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="54,159,54,334" FontSize="16" FontFamily="Comic Sans MS" BorderBrush="#FFE600FF" Background="#FFFF6FAA" Foreground="White">
+        <PasswordBox x:Name="PasswordText" RenderTransformOrigin="0.5,3.5"  HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="40,159,39,334" FontSize="16" FontFamily="Comic Sans MS" BorderBrush="#FFE600FF" Background="#FFFF6FAA" Foreground="White">
             <PasswordBox.SelectionBrush>
                 <ImageBrush/>
             </PasswordBox.SelectionBrush>
@@ -46,7 +46,7 @@
                 <ImageBrush/>
             </Button.BorderBrush>
         </Button>
-        <ComboBox x:Name="NameMail" Text="@gmail.com" HorizontalAlignment="Right" Margin="0,93,54,0" VerticalAlignment="Top" Width="90" RenderTransformOrigin="0.478,0.528" Height="36" FontSize="16" FontFamily="Comic Sans MS" BorderBrush="#FFE600FF">
+        <ComboBox x:Name="NameMail" Text="@gmail.com" HorizontalAlignment="Right" Margin="0,93,39,0" VerticalAlignment="Top" Width="105" RenderTransformOrigin="0.478,0.528" Height="36" FontSize="16" FontFamily="Comic Sans MS" BorderBrush="#FFE600FF">
             <ListBoxItem Content="@gmail.com"/>
             <ListBoxItem Content="@mail.ru"/>
         </ComboBox>
