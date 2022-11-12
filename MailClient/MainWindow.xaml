@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="Authorization" Height="504" Width="850" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" >
     <Window.Background>
-        <ImageBrush ImageSource="/BackGround.jpg" Stretch="UniformToFill"/>
+        <ImageBrush Stretch="UniformToFill" ImageSource="/Items/BackGround.jpg"/>
     </Window.Background>
 
     <Grid Height="522" VerticalAlignment="Top" HorizontalAlignment="Center" Width="482" Margin="0,10,0,0" >
@@ -32,7 +32,7 @@
                 <ImageBrush/>
             </Button.BorderBrush>
             <Button.Background>
-                <ImageBrush ImageSource="/Enter.png" Stretch="Uniform"/>
+                <ImageBrush Stretch="Uniform" ImageSource="/Items/Enter.png"/>
             </Button.Background>
         </Button>
         <Button Margin="55,274,0,0" Click="Reg_Click" FontFamily="Comic Sans MS" FontSize="18" HorizontalAlignment="Left" Width="50" Height="60" VerticalAlignment="Top" RenderTransformOrigin="0.72,0.984" >
@@ -40,7 +40,7 @@
                 <DropShadowEffect/>
             </Button.Effect>
             <Button.Background>
-                <ImageBrush ImageSource="/Registration.png" Stretch="Uniform"/>
+                <ImageBrush Stretch="Uniform" ImageSource="/Items/Registration.png"/>
             </Button.Background>
             <Button.BorderBrush>
                 <ImageBrush/>

@@ -9,17 +9,17 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="BackContent.jpg" />
-    <None Remove="BackContentRecive.jpg" />
-    <None Remove="BackGround.jpg" />
-    <None Remove="Del.png" />
-    <None Remove="Enter.png" />
-    <None Remove="Input.png" />
-    <None Remove="Out.png" />
-    <None Remove="Refresh.png" />
-    <None Remove="Registration.png" />
-    <None Remove="Send.png" />
-    <None Remove="Write.png" />
+    <None Remove="Items\BackContent.jpg" />
+    <None Remove="Items\BackContentRecive.jpg" />
+    <None Remove="Items\BackGround.jpg" />
+    <None Remove="Items\Del.png" />
+    <None Remove="Items\Enter.png" />
+    <None Remove="Items\Input.png" />
+    <None Remove="Items\Out.png" />
+    <None Remove="Items\Refresh.png" />
+    <None Remove="Items\Registration.png" />
+    <None Remove="Items\Send.png" />
+    <None Remove="Items\Write.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -27,17 +27,39 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="BackContent.jpg" />
-    <Resource Include="BackContentRecive.jpg" />
-    <Resource Include="BackGround.jpg" />
-    <Resource Include="Del.png" />
-    <Resource Include="Enter.png" />
-    <Resource Include="Input.png" />
-    <Resource Include="Out.png" />
-    <Resource Include="Refresh.png" />
-    <Resource Include="Registration.png" />
-    <Resource Include="Send.png" />
-    <Resource Include="Write.png" />
+    <Resource Include="Items\BackContent.jpg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Items\BackContentRecive.jpg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Items\BackGround.jpg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Items\Del.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Items\Enter.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Items\Input.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Items\Out.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Items\Refresh.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Items\Registration.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Items\Send.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Items\Write.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
 
 </Project>
