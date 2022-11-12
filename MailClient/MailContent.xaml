@@ -65,8 +65,8 @@
                         <DataGrid.Columns  >
 
                             <DataGridTextColumn Binding="{Binding Path= DateTime}" IsReadOnly="True" Header="Date" Width="*"/>
-                            <DataGridTextColumn Binding="{Binding Path= IdHow}"  IsReadOnly="True" Header="From" Width="*"/>
-                            <DataGridTextColumn Binding="{Binding Path= IdWhom}"  IsReadOnly="True" Header="To" Width="*" FontFamily="Comic Sans MS" FontSize="14" />
+                            <DataGridTextColumn x:Name="How" Binding="{Binding Path= IdHow}"  IsReadOnly="True" Header="From" Width="*"/>
+                            <DataGridTextColumn x:Name="Whom" Binding="{Binding Path= IdWhom}"  IsReadOnly="True" Header="To" Width="*" FontFamily="Comic Sans MS" FontSize="14" />
                             <DataGridTextColumn Binding="{Binding Path= Topic}"  Header="Topic" Width="*"/>
                         </DataGrid.Columns>
                     </DataGrid>

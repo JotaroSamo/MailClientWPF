@@ -60,6 +60,10 @@ namespace MailClient
                 GetData getData = new GetData();
                 var mail = JsonSerializer.Deserialize<MessegeMail[]>(getData.GetDatasH(Mail));
                 OutMess.ItemsSource = mail;
+
+              
+                
+                
             }
             catch (Exception ex)
             {
