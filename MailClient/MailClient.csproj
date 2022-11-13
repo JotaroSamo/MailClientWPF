@@ -5,59 +5,59 @@
     <TargetFramework>net6.0-windows</TargetFramework>
     <Nullable>enable</Nullable>
     <UseWPF>true</UseWPF>
-    <ApplicationIcon>Items\MailIcon.ico</ApplicationIcon>
+    <ApplicationIcon>Items\img\MailIcon.ico</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Items\BackContent.jpg" />
-    <None Remove="Items\BackContentRecive.jpg" />
-    <None Remove="Items\BackGround.jpg" />
-    <None Remove="Items\Del.png" />
-    <None Remove="Items\Enter.png" />
-    <None Remove="Items\Input.png" />
-    <None Remove="Items\Out.png" />
-    <None Remove="Items\Refresh.png" />
-    <None Remove="Items\Registration.png" />
-    <None Remove="Items\Send.png" />
-    <None Remove="Items\Write.png" />
+    <None Remove="Items\img\BackContent.jpg" />
+    <None Remove="Items\img\BackContentRecive.jpg" />
+    <None Remove="Items\img\BackGround.jpg" />
+    <None Remove="Items\img\Del.png" />
+    <None Remove="Items\img\Enter.png" />
+    <None Remove="Items\img\Input.png" />
+    <None Remove="Items\img\Out.png" />
+    <None Remove="Items\img\Refresh.png" />
+    <None Remove="Items\img\Registration.png" />
+    <None Remove="Items\img\Send.png" />
+    <None Remove="Items\img\Write.png" />
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="Items\MailIcon.ico" />
+    <Content Include="Items\img\MailIcon.ico" />
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="Items\BackContent.jpg">
+    <Resource Include="Items\img\BackContent.jpg">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Items\BackContentRecive.jpg">
+    <Resource Include="Items\img\BackContentRecive.jpg">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Items\BackGround.jpg">
+    <Resource Include="Items\img\BackGround.jpg">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Items\Del.png">
+    <Resource Include="Items\img\Del.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Items\Enter.png">
+    <Resource Include="Items\img\Enter.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Items\Input.png">
+    <Resource Include="Items\img\Input.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Items\Out.png">
+    <Resource Include="Items\img\Out.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Items\Refresh.png">
+    <Resource Include="Items\img\Refresh.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Items\Registration.png">
+    <Resource Include="Items\img\Registration.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Items\Send.png">
+    <Resource Include="Items\img\Send.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Items\Write.png">
+    <Resource Include="Items\img\Write.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
   </ItemGroup>

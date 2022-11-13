@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="Mail" Height="642" Width="1252" Loaded="Window_Loaded" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Window.Background>
-        <ImageBrush Stretch="UniformToFill" TileMode="None" ImageSource="/Items/BackContentRecive.jpg">
+        <ImageBrush Stretch="UniformToFill" TileMode="None" ImageSource="/Items/img/BackContentRecive.jpg">
             <ImageBrush.RelativeTransform>
                 <TransformGroup>
                     <ScaleTransform CenterY="1" CenterX="1"/>
@@ -32,7 +32,7 @@
             <TabItem.Header>
                 <TextBlock Height="25" Width="164" HorizontalAlignment="Center" FontFamily="Comic Sans MS" FontSize="18">
                     <TextBlock.Background>
-                        <ImageBrush Stretch="Uniform" ImageSource="/Items/Input.png"/>
+                        <ImageBrush Stretch="Uniform" ImageSource="/Items/img/Input.png"/>
 
                     </TextBlock.Background></TextBlock>
             </TabItem.Header>
@@ -83,7 +83,7 @@
                             <ImageBrush/>
                         </Button.BorderBrush>
                         <Button.Background>
-                            <ImageBrush Stretch="Uniform" ImageSource="/Items/Refresh.png"/>
+                            <ImageBrush Stretch="Uniform" ImageSource="/Items/img/Refresh.png"/>
                         </Button.Background>
                     </Button>
                     <Button  HorizontalAlignment="Left" Margin="754,116,0,0" VerticalAlignment="Top" Height="60" Width="50" FontFamily="Comic Sans MS" FontSize="18" Click="Out">
@@ -94,7 +94,7 @@
                             <ImageBrush/>
                         </Button.BorderBrush>
                         <Button.Background>
-                            <ImageBrush Stretch="Uniform" ImageSource="/Items/Out.png"/>
+                            <ImageBrush Stretch="Uniform" ImageSource="/Items/img/Out.png"/>
                         </Button.Background>
 
                     </Button>
@@ -106,7 +106,7 @@
                             <ImageBrush/>
                         </Button.BorderBrush>
                         <Button.Background>
-                            <ImageBrush Stretch="Uniform" ImageSource="/Items/Del.png"/>
+                            <ImageBrush Stretch="Uniform" ImageSource="/Items/img/Del.png"/>
                         </Button.Background>
                     </Button>
 
@@ -123,14 +123,14 @@
                         <DropShadowEffect/>
                     </TextBlock.Effect>
                     <TextBlock.Background>
-                        <ImageBrush Stretch="Uniform" ImageSource="/Items/Write.png"/>
+                        <ImageBrush Stretch="Uniform" ImageSource="/Items/img/Write.png"/>
                     </TextBlock.Background>
                 </TextBlock>
             </TabItem.Header>
             <TabItem.Content>
                 <Grid Height="458" Margin="0,0,3,0" >
                     <Grid.Background>
-                        <ImageBrush ImageSource="/Items/BackContent.jpg"/>
+                        <ImageBrush ImageSource="/Items/img/BackContent.jpg"/>
                     </Grid.Background>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition/>
@@ -160,7 +160,7 @@
                     <Label Content="Topic" HorizontalAlignment="Left" Margin="365,10,0,0" VerticalAlignment="Top" Background="#00000000" Foreground="#FFFF000C" FontFamily="Comic Sans MS" FontWeight="Bold" FontStyle="Italic" FontSize="16"/>
                     <Button HorizontalAlignment="Left" Margin="525,400,0,0" VerticalAlignment="Top" Width="53" Click="SendMessage" FontFamily="Comic Sans MS" FontSize="18" Height="37" FontWeight="Bold" FontStyle="Italic" >
                         <Button.Background>
-                            <ImageBrush Stretch="Uniform" ImageSource="/Items/Send.png"/>
+                            <ImageBrush Stretch="Uniform" ImageSource="/Items/img/Send.png"/>
                         </Button.Background>
                         <Button.BorderBrush>
                             <ImageBrush/>
