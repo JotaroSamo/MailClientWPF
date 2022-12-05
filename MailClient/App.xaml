@@ -4,6 +4,11 @@
              xmlns:local="clr-namespace:MailClient"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Page/Themes/Brushes.xaml" />
+                <ResourceDictionary Source="Page/Themes/Core.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>

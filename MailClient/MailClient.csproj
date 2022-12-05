@@ -9,9 +9,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Items\img\BackContent.jpg" />
-    <None Remove="Items\img\BackContentRecive.jpg" />
-    <None Remove="Items\img\BackGround.jpg" />
     <None Remove="Items\img\Del.png" />
     <None Remove="Items\img\Enter.png" />
     <None Remove="Items\img\Input.png" />
@@ -19,7 +16,7 @@
     <None Remove="Items\img\Refresh.png" />
     <None Remove="Items\img\Registration.png" />
     <None Remove="Items\img\Send.png" />
-    <None Remove="Items\img\Write.png" />
+    <None Remove="MailIcon.ico" />
   </ItemGroup>
 
   <ItemGroup>
@@ -27,15 +24,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="Items\img\BackContent.jpg">
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Items\img\BackContentRecive.jpg">
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Items\img\BackGround.jpg">
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
     <Resource Include="Items\img\Del.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
@@ -57,9 +45,7 @@
     <Resource Include="Items\img\Send.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Items\img\Write.png">
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
+    <Resource Include="MailIcon.ico" />
   </ItemGroup>
 
 </Project>

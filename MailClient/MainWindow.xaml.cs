@@ -1,6 +1,7 @@
 ﻿using MailClient.Models.DBModels;
 using MailClient.Network;
 using MailClient.Network.Methods;
+using MailClient.Page;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,47 +26,14 @@ namespace MailClient
     /// </summary>
     public partial class MainWindow : Window
     {
-        User user;
-        string perm;
+        MainWindow main;
         public MainWindow()
         {
             InitializeComponent();
+            main=this;
+            frame.Navigate(new Start(main)) ;
         }
 
-        private void Out_Click(object sender, RoutedEventArgs e)
-        {
-            Check checkUser = new Check();
-             user  = new User() {Mail= MailName.Text + NameMail.Text, Passowrd= PasswordText.Password };
-            perm = JsonSerializer.Serialize(user);
-            bool b = checkUser.Checks( perm,"+");
-            if (b == true)
-            {
-                MailContent open = new MailContent(MailName.Text + NameMail.Text);
-                open.Show();
-                this.Close();
-            }
-            if (b == false)
-            {
-                MessageBox.Show("Incorrect login or password!!!");
-            }
-
-        }
-
-        private void Reg_Click(object sender, RoutedEventArgs e)
-        {
-            Check checkUser = new Check();
-            user = new User() { Mail = MailName.Text + NameMail.Text, Passowrd = PasswordText.Password };
-            perm = JsonSerializer.Serialize(user);
-            bool b = checkUser.Checks(perm, "AddUser");
-            if (b == true)
-            {
-                MessageBox.Show("Successful registration!!");
-            }
-            if (b == false)
-            {
-                MessageBox.Show("Such a user exists!");
-            }
-        }
 
 
      
