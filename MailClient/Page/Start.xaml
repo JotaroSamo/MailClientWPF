@@ -20,7 +20,7 @@
             <ImageBrush/>
         </Grid.Background>
         <TextBox Grid.Row="0" x:Name="MailName" Margin="0,102,331,29"    HorizontalContentAlignment="Center" VerticalContentAlignment="Stretch" HorizontalAlignment="Right" Width="300" FontSize="16" FontFamily="Comic Sans MS" Text="Mail" />
-        <PasswordBox Grid.Row="1" x:Name="PasswordText" RenderTransformOrigin="0.5,3.5"  HorizontalContentAlignment="Center" VerticalContentAlignment="Stretch" Margin="219,10,222,20" FontSize="16" FontFamily="Comic Sans MS"/>
+        <PasswordBox Grid.Row="1" x:Name="PasswordText" RenderTransformOrigin="0.5,3.5"  HorizontalContentAlignment="Center" VerticalContentAlignment="Stretch" Margin="219,10,191,19" FontSize="16" FontFamily="Comic Sans MS"/>
         <Button Grid.Row="2" Click="Out_Click" FontFamily="Comic Sans MS" FontSize="24" HorizontalAlignment="Left" Width="50" Height="60" VerticalAlignment="Top" Margin="219,0,0,0" >
             <Button.Effect>
                 <DropShadowEffect/>
@@ -43,7 +43,7 @@
                 <ImageBrush/>
             </Button.BorderBrush>
         </Button>
-        <ComboBox x:Name="NameMail" Text="@gmail.com"  HorizontalAlignment="Right" Margin="0,99,220,0" VerticalAlignment="Top" Width="100" RenderTransformOrigin="0.426,0.535" Height="35" FontSize="16" FontFamily="Comic Sans MS" AlternationCount="1">
+        <ComboBox x:Name="NameMail" Text="@gmail.com"  HorizontalAlignment="Right" Margin="0,99,191,0" VerticalAlignment="Top" Width="129" RenderTransformOrigin="0.426,0.535" Height="35" FontSize="16" FontFamily="Comic Sans MS" SelectedIndex="0">
             <ListBoxItem Content="@gmail.com"/>
             <ListBoxItem Content="@mail.ru"/>
         </ComboBox>

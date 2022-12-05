@@ -11,9 +11,9 @@ namespace MailClient.Network.Methods
 {
     public class Check
     {
-        public bool Checks(string mail,string simvol)
+        public bool Checks(string mail,string simvol, string  perm)
         {
-            string message = simvol+ "`" + mail;
+            string message = simvol+ "`" + mail + "`"+perm;
             TCPClient tcp = new TCPClient();
             message=tcp.Tcpclient(message);
             if (message == "+")

@@ -36,7 +36,7 @@ namespace MailClient.Page
             Check checkUser = new Check();
             user = new User() { Mail = MailName.Text + NameMail.Text, Passowrd = PasswordText.Password };
             perm = JsonSerializer.Serialize(user);
-            bool b = checkUser.Checks(perm, "+");
+            bool b = checkUser.Checks(perm, "+","");
             if (b == true)
             {
                 MailContent open = new MailContent(MailName.Text + NameMail.Text);

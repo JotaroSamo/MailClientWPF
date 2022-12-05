@@ -59,8 +59,9 @@ namespace MailClient
             {
                 GetData getData = new GetData();
                 var mail = JsonSerializer.Deserialize<MessegeMail[]>(getData.GetDatasH(Mail));
-                OutMess.ItemsSource = mail;
 
+                OutMess.ItemsSource = mail.Where(c=>c.IdWhom!=Mail);
+                inMess.ItemsSource= mail.Where(c => c.IdHow != Mail); ;
               
                 
                 
@@ -105,6 +106,20 @@ namespace MailClient
             TCPClient tCPClient = new TCPClient();
             tCPClient.Tcpclient("Delete" + "`" + messegeMail?.Id);
             UpdateData();
+        }
+
+        private void inMess_MouseUp(object sender, MouseButtonEventArgs e)
+        {
+            try
+            {
+                MessegeMail? messegeMail = inMess.SelectedItem as MessegeMail;
+                Outblock2.Text = messegeMail?.MailMess;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
     }
 }

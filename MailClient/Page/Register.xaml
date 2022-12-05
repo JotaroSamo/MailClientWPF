@@ -4,33 +4,24 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:MailClient.Page"
-      mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
-      Title="Register">
+      mc:Ignorable="d"
+      Title="Register" Height="326" Width="464">
 
-    <Grid Height="484" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Width="850" Margin="0,10,0,0" >
+    <Grid VerticalAlignment="Stretch" HorizontalAlignment="Stretch"  >
         <Grid.RowDefinitions>
-            <RowDefinition Height="161*">
+            <RowDefinition Height="177*">
 
             </RowDefinition>
-            <RowDefinition Height="63*"></RowDefinition>
-            <RowDefinition Height="260*"></RowDefinition>
+            <RowDefinition Height="66*"></RowDefinition>
+            <RowDefinition Height="83*"></RowDefinition>
         </Grid.RowDefinitions>
         <Grid.Background>
             <ImageBrush/>
         </Grid.Background>
-        <TextBox Grid.Row="0" x:Name="MailName" Margin="0,102,331,29"    HorizontalContentAlignment="Center" VerticalContentAlignment="Stretch" HorizontalAlignment="Right" Width="300" FontSize="16" FontFamily="Comic Sans MS" BorderBrush="#FFCE00FF" Background="#FFFF6FAA" Foreground="White" Text="Mail" TextChanged="MailName_TextChanged" >
-            <TextBox.SelectionBrush>
-                <ImageBrush/>
-            </TextBox.SelectionBrush>
-        </TextBox>
-        <PasswordBox Grid.Row="1" x:Name="PasswordText" RenderTransformOrigin="0.5,3.5"  HorizontalContentAlignment="Center" VerticalContentAlignment="Stretch" Margin="219,10,222,20" FontSize="16" FontFamily="Comic Sans MS" BorderBrush="#FFE600FF" Background="#FFFF6FAA" Foreground="White">
-            <PasswordBox.SelectionBrush>
-                <ImageBrush/>
-            </PasswordBox.SelectionBrush>
-        </PasswordBox>
+        <TextBox Grid.Row="0" x:Name="MailName" Margin="10,129,0,14"    HorizontalContentAlignment="Center" VerticalContentAlignment="Stretch" HorizontalAlignment="Left" Width="308" FontSize="16" FontFamily="Comic Sans MS" Text="Mail" TextChanged="MailName_TextChanged" />
+        <PasswordBox Grid.Row="1" x:Name="PasswordText" RenderTransformOrigin="0.5,3.5"  HorizontalContentAlignment="Center" VerticalContentAlignment="Stretch" Margin="10,13,10,19" FontSize="16" FontFamily="Comic Sans MS"/>
 
-        <Button Grid.Row="2" Margin="219,0,0,0" Click="Reg_Click" FontFamily="Comic Sans MS" FontSize="18" HorizontalAlignment="Left" Width="50" Height="60" VerticalAlignment="Top"  >
+        <Button Grid.Row="2" Margin="0,6,0,0" Click="Reg_Click" FontFamily="Comic Sans MS" FontSize="18" HorizontalAlignment="Center" Width="50" Height="60" VerticalAlignment="Top" Name="Reg" >
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>
@@ -41,10 +32,11 @@
                 <ImageBrush/>
             </Button.BorderBrush>
         </Button>
-        <ComboBox x:Name="NameMail" Text="@gmail.com"  HorizontalAlignment="Right" Margin="0,99,220,0" VerticalAlignment="Top" Width="100" RenderTransformOrigin="0.426,0.535" Height="35" FontSize="16" FontFamily="Comic Sans MS" BorderBrush="#FFE600FF" AlternationCount="1">
+        <ComboBox x:Name="NameMail" Text="@gmail.com"  HorizontalAlignment="Left" Margin="323,127,0,0" VerticalAlignment="Top" Width="131" RenderTransformOrigin="0.426,0.535" Height="36" FontSize="16" FontFamily="Comic Sans MS" AlternationCount="1" SelectedIndex="0">
             <ListBoxItem Content="@gmail.com"/>
             <ListBoxItem Content="@mail.ru"/>
         </ComboBox>
-
+        <Label Name="lb" HorizontalAlignment="Center" Margin="0,37,0,0" VerticalAlignment="Top" Height="51" Width="276" Foreground="#FF1FFF00" FontSize="24"/>
+        <Label Name="lb2" HorizontalAlignment="Center"  Margin="0,37,0,0" VerticalAlignment="Top" Height="51" Width="276" Foreground="Red" FontSize="24"/>
     </Grid>
 </Page>

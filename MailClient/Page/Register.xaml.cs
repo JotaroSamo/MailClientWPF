@@ -38,20 +38,39 @@ namespace MailClient.Page
             Check checkUser = new Check();
             user = new User() { Mail = MailName.Text + NameMail.Text, Passowrd = PasswordText.Password };
             perm = JsonSerializer.Serialize(user);
-            bool b = checkUser.Checks(perm, "AddUser");
-            if (b == true)
-            {
-                MessageBox.Show("Successful registration!!");
-            }
-            if (b == false)
-            {
-                MessageBox.Show("Such a user exists!");
-            }
+            bool b = checkUser.Checks(perm, "AddUser","+");
+            main.frame.Navigate(new Start(main));
         }
 
         private void MailName_TextChanged(object sender, TextChangedEventArgs e)
         {
+            Check checkUser = new Check();
+            try
+            {
+                user = new User() { Mail = MailName.Text + NameMail.Text };
+                perm = JsonSerializer.Serialize(user);
+                bool b = checkUser.Checks(perm, "AddUser", "");
+                if (b == true)
+                {
+                    Reg.Visibility = Visibility.Visible;
+                    lb2.Visibility= Visibility.Collapsed;
+                    lb.Visibility = Visibility.Visible;
+                    lb.Content = "Good";
+                }
+                if (b == false)
+                {
+                    Reg.Visibility = Visibility.Collapsed;
+                    lb.Visibility = Visibility.Collapsed;
+                    lb2.Visibility = Visibility.Visible;
+                    lb2.Content = "Not good!!!";
+                }
+            }
+            catch (Exception)
+            {
 
+           
+            }
+          
         }
     }
 }
