@@ -9,18 +9,18 @@
 
     <Grid VerticalAlignment="Stretch" HorizontalAlignment="Stretch"  >
         <Grid.RowDefinitions>
-            <RowDefinition Height="177*">
+            <RowDefinition Height="137*">
 
             </RowDefinition>
-            <RowDefinition Height="66*"></RowDefinition>
+            <RowDefinition Height="106*"></RowDefinition>
             <RowDefinition Height="83*"></RowDefinition>
         </Grid.RowDefinitions>
         <Grid.Background>
             <ImageBrush/>
         </Grid.Background>
-        <TextBox Grid.Row="0" x:Name="MailName" Margin="10,129,0,14"    HorizontalContentAlignment="Center" VerticalContentAlignment="Stretch" HorizontalAlignment="Left" Width="308" FontSize="16" FontFamily="Comic Sans MS" Text="Mail" TextChanged="MailName_TextChanged" />
-        <PasswordBox Grid.Row="1" x:Name="PasswordText" RenderTransformOrigin="0.5,3.5"  HorizontalContentAlignment="Center" VerticalContentAlignment="Stretch" Margin="10,13,10,19" FontSize="16" FontFamily="Comic Sans MS"/>
-
+        <TextBox Grid.Row="0" x:Name="MailName" Margin="10,88,0,15"    HorizontalContentAlignment="Center" VerticalContentAlignment="Stretch" HorizontalAlignment="Left" Width="308" FontSize="16" FontFamily="Comic Sans MS"  TextChanged="MailName_TextChanged" />
+        <PasswordBox Grid.Row="1" x:Name="PasswordText" RenderTransformOrigin="0.5,3.5"  HorizontalContentAlignment="Center" VerticalContentAlignment="Stretch" Margin="10,3,10,69" FontSize="16" FontFamily="Comic Sans MS"/>
+        <PasswordBox Grid.Row="1" x:Name="PasswordTextT" RenderTransformOrigin="0.5,3.5"  HorizontalContentAlignment="Center" VerticalContentAlignment="Stretch" Margin="10,62,10,10" FontSize="16" FontFamily="Comic Sans MS"/>
         <Button Grid.Row="2" Margin="0,6,0,0" Click="Reg_Click" FontFamily="Comic Sans MS" FontSize="18" HorizontalAlignment="Center" Width="50" Height="60" VerticalAlignment="Top" Name="Reg" >
             <Button.Effect>
                 <DropShadowEffect/>
@@ -32,11 +32,14 @@
                 <ImageBrush/>
             </Button.BorderBrush>
         </Button>
-        <ComboBox x:Name="NameMail" Text="@gmail.com"  HorizontalAlignment="Left" Margin="323,127,0,0" VerticalAlignment="Top" Width="131" RenderTransformOrigin="0.426,0.535" Height="36" FontSize="16" FontFamily="Comic Sans MS" AlternationCount="1" SelectedIndex="0">
+        <ComboBox x:Name="NameMail" Text="@gmail.com"  HorizontalAlignment="Left" Margin="323,88,0,0" VerticalAlignment="Top" Width="131" RenderTransformOrigin="0.426,0.535" Height="36" FontSize="16" FontFamily="Comic Sans MS" AlternationCount="1" SelectedIndex="0">
             <ListBoxItem Content="@gmail.com"/>
             <ListBoxItem Content="@mail.ru"/>
         </ComboBox>
         <Label Name="lb" HorizontalAlignment="Center" Margin="0,37,0,0" VerticalAlignment="Top" Height="51" Width="276" Foreground="#FF1FFF00" FontSize="24"/>
         <Label Name="lb2" HorizontalAlignment="Center"  Margin="0,37,0,0" VerticalAlignment="Top" Height="51" Width="276" Foreground="Red" FontSize="24"/>
+        <Label Content="Password" HorizontalAlignment="Left" Margin="10,113,0,0" VerticalAlignment="Top" Width="154" FontFamily="Comic Sans MS" FontSize="20" Height="46" Grid.RowSpan="2"/>
+        <Label Content="Repeat password" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Center" Width="335" FontFamily="Comic Sans MS" FontSize="20" Height="46" Grid.Row="1"/>
+        <Label Content="Mail" HorizontalAlignment="Left" Margin="10,59,0,0" VerticalAlignment="Top" Width="60" FontFamily="Comic Sans MS" FontSize="20" Height="46"/>
     </Grid>
 </Page>

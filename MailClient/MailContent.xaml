@@ -15,7 +15,7 @@
     <TabControl x:Name="ReciveSend" Margin="0,0,0,-6" HorizontalAlignment="Center" Width="1272">
         <TabItem x:Name="Mess">
             <TabItem.Header>
-                <TextBlock Height="25" Width="164" HorizontalAlignment="Center" FontFamily="Comic Sans MS" FontSize="18">
+                <TextBlock Height="25" Width="202" HorizontalAlignment="Center" FontFamily="Comic Sans MS" FontSize="18" Text="Outgoing">
                     <TextBlock.Background>
                         <ImageBrush Stretch="Uniform" ImageSource="/Items/img/outmess.png"/>
 
@@ -82,9 +82,9 @@
         </TabItem>
         <TabItem x:Name="Messd">
             <TabItem.Header>
-                <TextBlock Height="25" Width="164" HorizontalAlignment="Center" FontFamily="Comic Sans MS" FontSize="18">
+                <TextBlock Height="25" Width="202" HorizontalAlignment="Center" FontFamily="Comic Sans MS" FontSize="18" TextAlignment="Left" Text="Incoming">
                     <TextBlock.Background>
-                        <ImageBrush Stretch="Uniform" ImageSource="/Items/img/in.png"/>
+                        <ImageBrush Stretch="Uniform" ImageSource="/Items/img/in.png" TileMode="None"/>
 
                     </TextBlock.Background></TextBlock>
             </TabItem.Header>
@@ -139,7 +139,7 @@
         <TabItem x:Name="SendMess">
             <TabItem.Header>
 
-                <TextBlock Height="28" Width="167" HorizontalAlignment="Center" FontFamily="Comic Sans MS" FontSize="18">
+                <TextBlock Height="28" Width="290" HorizontalAlignment="Center" FontFamily="Comic Sans MS" FontSize="18" Text="Send message">
                     <TextBlock.Effect>
                         <DropShadowEffect/>
                     </TextBlock.Effect>
@@ -160,8 +160,8 @@
                     </TextBox>
                     <TextBox HorizontalAlignment="Left" Margin="365,38,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="160" Height="35" x:Name="Tbox" FontFamily="Comic Sans MS" FontSize="16"/>
                     <TextBox HorizontalAlignment="Left" Margin="31,38,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="167" Height="35" x:Name="Hbox" FontFamily="Comic Sans MS" FontSize="16"/>
-                    <Label Content="Whom" HorizontalAlignment="Left" Margin="56,-27,0,0" VerticalAlignment="Top" FontFamily="Comic Sans MS" FontSize="36" FontWeight="Bold" FontStyle="Italic" Foreground="#FF00F9FF" Width="116"/>
-                    <Label Content="Topic" HorizontalAlignment="Left" Margin="390,-27,0,0" VerticalAlignment="Top" FontFamily="Comic Sans MS" FontWeight="Bold" FontStyle="Italic" FontSize="36" Foreground="#FF00F9FF" Width="110"/>
+                    <Label Content="Recipient" HorizontalAlignment="Left" Margin="31,-22,0,0" VerticalAlignment="Top" FontFamily="Comic Sans MS" FontSize="36" FontWeight="Bold" FontStyle="Italic" Foreground="#FF00F9FF" Width="172"/>
+                    <Label Content="Topic" HorizontalAlignment="Left" Margin="365,-27,0,0" VerticalAlignment="Top" FontFamily="Comic Sans MS" FontWeight="Bold" FontStyle="Italic" FontSize="36" Foreground="#FF00F9FF" Width="110"/>
                     <Button HorizontalAlignment="Left" Margin="1154,400,0,0" VerticalAlignment="Top" Width="53" Click="SendMessage" FontFamily="Comic Sans MS" FontSize="18" Height="37" FontWeight="Bold" FontStyle="Italic" >
                         <Button.Background>
                             <ImageBrush Stretch="Uniform" ImageSource="/Items/img/Send.png"/>

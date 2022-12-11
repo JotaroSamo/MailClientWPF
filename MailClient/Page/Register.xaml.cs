@@ -35,11 +35,19 @@ namespace MailClient.Page
 
         private void Reg_Click(object sender, RoutedEventArgs e)
         {
-            Check checkUser = new Check();
-            user = new User() { Mail = MailName.Text + NameMail.Text, Passowrd = PasswordText.Password };
-            perm = JsonSerializer.Serialize(user);
-            bool b = checkUser.Checks(perm, "AddUser","+");
-            main.frame.Navigate(new Start(main));
+            if (PasswordText.Password==PasswordTextT.Password)
+            {
+                Check checkUser = new Check();
+                user = new User() { Mail = MailName.Text + NameMail.Text, Passowrd = PasswordText.Password };
+                perm = JsonSerializer.Serialize(user);
+                checkUser.Checks(perm, "AddUser", "+");
+                main.frame.Navigate(new Start(main));
+            }
+            else
+            {
+                MessageBox.Show("Password don`t match!");
+            }
+          
         }
 
         private void MailName_TextChanged(object sender, TextChangedEventArgs e)
