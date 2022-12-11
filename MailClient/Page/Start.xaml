@@ -47,7 +47,7 @@
             <ListBoxItem Content="@gmail.com"/>
             <ListBoxItem Content="@mail.ru"/>
         </ComboBox>
-        <Label Content="Mail" HorizontalAlignment="Left" Margin="35,86,0,0" VerticalAlignment="Top" Width="106" FontFamily="Comic Sans MS" FontSize="36"/>
-        <Label Content="Password" HorizontalAlignment="Left" Margin="35,160,0,0" VerticalAlignment="Top" Width="184" FontFamily="Comic Sans MS" FontSize="36" Grid.RowSpan="2"/>
+        <Label Content="Mail" HorizontalAlignment="Left" Margin="30,86,0,0" VerticalAlignment="Top" Width="106" FontFamily="Comic Sans MS" FontSize="36"/>
+        <Label Content="Password" HorizontalAlignment="Left" Margin="30,154,0,0" VerticalAlignment="Top" Width="184" FontFamily="Comic Sans MS" FontSize="36" Grid.RowSpan="2"/>
     </Grid>
 </Page>

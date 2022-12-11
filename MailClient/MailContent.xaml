@@ -40,7 +40,7 @@
                         </DataGrid.Columns>
                     </DataGrid>
                     <TextBox x:Name="Outblock" Margin="1,0,10,0" TextWrapping="Wrap" IsReadOnly="True" VerticalAlignment="Center" Height="552" FontFamily="Comic Sans MS" FontSize="16" Grid.Column="2"/>
-                    <Button Grid.Column="1" Margin="0,0,5,0" VerticalAlignment="Top" Height="60" Click="Button_Click" Foreground="Red" FontFamily="Comic Sans MS">
+                    <Button Grid.Column="1" Margin="0,0,446,0" VerticalAlignment="Top" Height="60" Click="Button_Click" Foreground="Red" FontFamily="Comic Sans MS" Grid.ColumnSpan="2">
                         <Button.Effect>
                             <DropShadowEffect/>
                         </Button.Effect>
@@ -51,7 +51,7 @@
                             <ImageBrush Stretch="Uniform" ImageSource="/Items/img/Refresh.png"/>
                         </Button.Background>
                     </Button>
-                    <Button Margin="3,494,2,0" VerticalAlignment="Top" Height="60" FontFamily="Comic Sans MS" FontSize="18" Click="Out"  Grid.Column="1">
+                    <Button Margin="0,494,446,0" VerticalAlignment="Top" Height="60" FontFamily="Comic Sans MS" FontSize="18" Click="Out"  Grid.Column="1" Grid.ColumnSpan="2">
                         <Button.Effect>
                             <DropShadowEffect/>
                         </Button.Effect>
@@ -63,7 +63,7 @@
                         </Button.Background>
 
                     </Button>
-                    <Button Margin="0,0,5,0" VerticalAlignment="Center" Height="59" Click="Delete" Foreground="Red" FontFamily="Comic Sans MS" Grid.Column="1">
+                    <Button VerticalAlignment="Center" Height="59" Click="Delete" Foreground="Red" FontFamily="Comic Sans MS" Grid.Column="1">
                         <Button.Effect>
                             <DropShadowEffect/>
                         </Button.Effect>
@@ -170,7 +170,7 @@
                             <ImageBrush/>
                         </Button.BorderBrush>
                     </Button>
-                    <ComboBox x:Name="MailAdress" HorizontalAlignment="Left" Margin="203,38,0,0" VerticalAlignment="Top" Width="136" Height="35" FontFamily="Comic Sans MS" FontSize="16" SelectedIndex="0">
+                    <ComboBox x:Name="MailAdress" HorizontalAlignment="Left" Margin="203,38,0,0" VerticalAlignment="Top" Width="136" Height="35" FontFamily="Comic Sans MS" FontSize="16" SelectedIndex="0" Foreground="White">
                         <ListBoxItem Content="@gmail.com"/>
                         <ListBoxItem Content="@mail.ru"/>
                     </ComboBox>
