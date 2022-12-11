@@ -13,7 +13,7 @@
         </LinearGradientBrush>
     </Window.Background>
     <TabControl x:Name="ReciveSend" Margin="0,0,0,-6" HorizontalAlignment="Center" Width="1272">
-        <TabItem x:Name="Mess">
+        <TabItem x:Name="Mess" Margin="12,-2,-2,-1">
             <TabItem.Header>
                 <TextBlock Height="25" Width="202" HorizontalAlignment="Center" FontFamily="Comic Sans MS" FontSize="18" Text="Outgoing">
                     <TextBlock.Background>
