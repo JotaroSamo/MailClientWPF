@@ -1,9 +1,12 @@
-﻿using MailClient.Models.DBModels;
+﻿using MailClient.DB.Content;
+using MailClient.Models.DBModels;
 using MailClient.Network;
 using MailClient.Network.Methods;
+using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.IO;
 using System.Linq;
 using System.Net.Mail;
 using System.Text;
@@ -40,28 +43,60 @@ namespace MailClient
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
            
-           UpdateData();
+           Task.Run( ()=> UpdateData());
            
         }
-
-
+        private string filePath; // Переменная для хранения пути к выбранному файлу
+        private void SelectFile(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            if (openFileDialog.ShowDialog() == true)
+            {
+                filePath = openFileDialog.FileName;
+                fileName.Content = openFileDialog.FileName;
+            }
+        }
         private void SendMessage(object sender, RoutedEventArgs e)
         {
-            MessegeMail mail = new MessegeMail() { DateTime = DateTime.Now, Topic = Tbox.Text, MailMess = Mbox.Text, IdHow = Mail, IdWhom = Hbox.Text + MailAdress.Text };
+            List<FileMessage> fileMessage = new List<FileMessage>();
+            if (!string.IsNullOrEmpty(filePath))
+            {
+                byte[] fileBytes = File.ReadAllBytes(filePath);
+                // Отправка файла
+                FileMessage fileMessages = new FileMessage()
+                {
+                    FileName = System.IO.Path.GetFileName(filePath),
+                    FileType = System.IO.Path.GetExtension(filePath),
+                    FileContent = fileBytes
+                };
+
+                fileMessage.Add(fileMessages);
+                // Ваш код для отправки файла
+            }
+            else
+            {
+                MessageBox.Show("Пожалуйста, выберите файл.");
+            }
+            MessegeMail mail = new MessegeMail() { DateTime = DateTime.Now, Topic = Tbox.Text, MailMess = Mbox.Text, IdHow = Mail, IdWhom = Hbox.Text + MailAdress.Text, Files = fileMessage };
             string m = JsonSerializer.Serialize(mail);
             TCPClient tCPClient = new TCPClient();
             tCPClient.Tcpclient("Save data" + "`" + m);
             UpdateData();
         }
-        public void UpdateData()
+        public async void UpdateData()
         {
             try
             {
-                GetData getData = new GetData();
-                var mail = JsonSerializer.Deserialize<MessegeMail[]>(getData.GetDatasH(Mail));
+                while (true)
+                {
+                    GetData getData = new GetData();
+                    var mail = JsonSerializer.Deserialize<MessegeMail[]>(await getData.GetDatasH(Mail));
 
-                OutMess.ItemsSource = mail.Where(c=>c.IdWhom!=Mail);
-                inMess.ItemsSource= mail.Where(c => c.IdHow != Mail); ;
+                    OutMess.ItemsSource = mail.Where(c => c.IdWhom != Mail);
+                    inMess.ItemsSource = mail.Where(c => c.IdHow != Mail);
+         
+                }
+              
               
                 
                 

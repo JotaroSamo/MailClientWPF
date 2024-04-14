@@ -8,7 +8,7 @@ namespace MailClient.Network.Methods
 {
     public class SetData
     {
-        public void SetsDatas(string mess)
+        public async Task SetsDatas(string mess)
         {
             TCPClient tCPClient = new TCPClient();
             tCPClient.Tcpclient(mess);

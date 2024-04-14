@@ -11,7 +11,7 @@ namespace MailClient.Network.Methods
 {
     public class Check
     {
-        public bool Checks(string mail,string simvol, string  perm)
+        public async Task<bool> Checks(string mail,string simvol, string  perm)
         {
             string message = simvol+ "`" + mail + "`"+perm;
             TCPClient tcp = new TCPClient();

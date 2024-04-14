@@ -8,7 +8,7 @@ namespace MailClient.Network.Methods
 {
     public class GetData
     {
-        public string GetDatasH(string Mail)
+        public async Task<string> GetDatasH(string Mail)
         {
             TCPClient tCP = new TCPClient();
             return tCP.Tcpclient("Get Data" + "`"+Mail);

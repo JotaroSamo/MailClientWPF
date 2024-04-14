@@ -15,7 +15,7 @@
     <TabControl x:Name="ReciveSend" Margin="0,0,0,-6" HorizontalAlignment="Center" Width="1272">
         <TabItem x:Name="Mess" Margin="12,-2,-2,-1">
             <TabItem.Header>
-                <TextBlock Height="25" Width="202" HorizontalAlignment="Center" FontFamily="Comic Sans MS" FontSize="18" Text="Outgoing">
+                <TextBlock Height="25" Width="252" HorizontalAlignment="Center" FontFamily="Comic Sans MS" FontSize="18" Text="Исходящие">
                     <TextBlock.Background>
                         <ImageBrush Stretch="Uniform" ImageSource="/Items/img/outmess.png"/>
 
@@ -34,9 +34,9 @@
                         </DataGrid.Effect>
                         <DataGrid.Columns  >
 
-                            <DataGridTextColumn Binding="{Binding Path= DateTime}" IsReadOnly="True" Header="Date" Width="*"/>
-                            <DataGridTextColumn x:Name="Whom" Binding="{Binding Path= IdWhom}"  IsReadOnly="True" Header="To" Width="*" FontFamily="Comic Sans MS" FontSize="14" />
-                            <DataGridTextColumn Binding="{Binding Path= Topic}"  Header="Topic" Width="*"/>
+                            <DataGridTextColumn Binding="{Binding Path= DateTime}" IsReadOnly="True" Header="Дата" Width="*"/>
+                            <DataGridTextColumn x:Name="Whom" Binding="{Binding Path= IdWhom}"  IsReadOnly="True" Header="Кому" Width="*" FontFamily="Comic Sans MS" FontSize="14" />
+                            <DataGridTextColumn Binding="{Binding Path= Topic}"  Header="Тема" Width="*"/>
                         </DataGrid.Columns>
                     </DataGrid>
                     <TextBox x:Name="Outblock" Margin="1,0,10,0" TextWrapping="Wrap" IsReadOnly="True" VerticalAlignment="Center" Height="552" FontFamily="Comic Sans MS" FontSize="16" Grid.Column="2"/>
@@ -82,7 +82,7 @@
         </TabItem>
         <TabItem x:Name="Messd">
             <TabItem.Header>
-                <TextBlock Height="25" Width="202" HorizontalAlignment="Center" FontFamily="Comic Sans MS" FontSize="18" TextAlignment="Left" Text="Incoming">
+                <TextBlock Height="25" Width="218" HorizontalAlignment="Center" FontFamily="Comic Sans MS" FontSize="18" TextAlignment="Left" Text="Входящие">
                     <TextBlock.Background>
                         <ImageBrush Stretch="Uniform" ImageSource="/Items/img/in.png" TileMode="None"/>
 
@@ -101,9 +101,9 @@
                         </DataGrid.Effect>
                         <DataGrid.Columns  >
 
-                            <DataGridTextColumn Binding="{Binding Path= DateTime}" IsReadOnly="True" Header="Date" Width="*"/>
-                            <DataGridTextColumn x:Name="Howw" Binding="{Binding Path= IdHow}"  IsReadOnly="True" Header="From" Width="*"/>
-                            <DataGridTextColumn Binding="{Binding Path= Topic}"  Header="Topic" Width="*"/>
+                            <DataGridTextColumn Binding="{Binding Path= DateTime}" IsReadOnly="True" Header="Дата" Width="*"/>
+                            <DataGridTextColumn x:Name="Howw" Binding="{Binding Path= IdHow}"  IsReadOnly="True" Header="От кого" Width="*"/>
+                            <DataGridTextColumn Binding="{Binding Path= Topic}"  Header="" Width="*"/>
                         </DataGrid.Columns>
                     </DataGrid>
                     <TextBox x:Name="Outblock2" Margin="1,0,10,0" TextWrapping="Wrap" IsReadOnly="True" VerticalAlignment="Center" Height="552" FontFamily="Comic Sans MS" FontSize="16" Grid.Column="2"/>
@@ -139,12 +139,12 @@
         <TabItem x:Name="SendMess">
             <TabItem.Header>
 
-                <TextBlock Height="28" Width="290" HorizontalAlignment="Center" FontFamily="Comic Sans MS" FontSize="18" Text="Send message">
+                <TextBlock Height="28" Width="416" HorizontalAlignment="Center" FontFamily="Comic Sans MS" FontSize="18" Text="Написать сообщение">
                     <TextBlock.Effect>
                         <DropShadowEffect/>
                     </TextBlock.Effect>
                     <TextBlock.Background>
-                        <ImageBrush Stretch="Uniform" ImageSource="/Items/img/Write.png"/>
+                        <ImageBrush  Stretch="Uniform" ImageSource="/Items/img/Write.png"/>
                     </TextBlock.Background>
                 </TextBlock>
             </TabItem.Header>
@@ -160,8 +160,8 @@
                     </TextBox>
                     <TextBox HorizontalAlignment="Left" Margin="365,38,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="160" Height="35" x:Name="Tbox" FontFamily="Comic Sans MS" FontSize="16"/>
                     <TextBox HorizontalAlignment="Left" Margin="31,38,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="167" Height="35" x:Name="Hbox" FontFamily="Comic Sans MS" FontSize="16"/>
-                    <Label Content="Recipient" HorizontalAlignment="Left" Margin="31,-22,0,0" VerticalAlignment="Top" FontFamily="Comic Sans MS" FontSize="36" FontWeight="Bold" FontStyle="Italic" Foreground="#FF00F9FF" Width="172"/>
-                    <Label Content="Topic" HorizontalAlignment="Left" Margin="365,-27,0,0" VerticalAlignment="Top" FontFamily="Comic Sans MS" FontWeight="Bold" FontStyle="Italic" FontSize="36" Foreground="#FF00F9FF" Width="110"/>
+                    <Label Content="Кому" HorizontalAlignment="Left" Margin="31,-22,0,0" VerticalAlignment="Top" FontFamily="Comic Sans MS" FontSize="36" FontWeight="Bold" FontStyle="Italic" Foreground="#FF00F9FF" Width="172"/>
+                    <Label Content="Тема" HorizontalAlignment="Left" Margin="365,-27,0,0" VerticalAlignment="Top" FontFamily="Comic Sans MS" FontWeight="Bold" FontStyle="Italic" FontSize="36" Foreground="#FF00F9FF" Width="110"/>
                     <Button HorizontalAlignment="Left" Margin="1154,400,0,0" VerticalAlignment="Top" Width="53" Click="SendMessage" FontFamily="Comic Sans MS" FontSize="18" Height="37" FontWeight="Bold" FontStyle="Italic" >
                         <Button.Background>
                             <ImageBrush Stretch="Uniform" ImageSource="/Items/img/Send.png"/>
@@ -174,6 +174,8 @@
                         <ListBoxItem Content="@gmail.com"/>
                         <ListBoxItem Content="@mail.ru"/>
                     </ComboBox>
+                    <Button Content="Выбрать файл" HorizontalAlignment="Center" Margin="0,38,0,0" VerticalAlignment="Top" Width="147" Click="SelectFile" Height="35"/>
+                    <Label x:Name="fileName" Content="" HorizontalAlignment="Left" Margin="722,43,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.316,-0.461" Width="147"/>
 
                 </Grid>
             </TabItem.Content>

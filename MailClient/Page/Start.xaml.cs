@@ -31,12 +31,12 @@ namespace MailClient.Page
             InitializeComponent();
             main = Main;
         }
-        private void Out_Click(object sender, RoutedEventArgs e)
+        private async void Out_Click(object sender, RoutedEventArgs e)
         {
             Check checkUser = new Check();
             user = new User() { Mail = MailName.Text + NameMail.Text, Passowrd = PasswordText.Password };
             perm = JsonSerializer.Serialize(user);
-            bool b = checkUser.Checks(perm, "+","");
+            bool b = await checkUser.Checks(perm, "+","");
             if (b == true)
             {
                 MailContent open = new MailContent(MailName.Text + NameMail.Text);

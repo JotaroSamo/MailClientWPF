@@ -38,8 +38,8 @@
         </ComboBox>
         <Label Name="lb" HorizontalAlignment="Center" Margin="0,37,0,0" VerticalAlignment="Top" Height="51" Width="276" Foreground="#FF1FFF00" FontSize="24"/>
         <Label Name="lb2" HorizontalAlignment="Center"  Margin="0,37,0,0" VerticalAlignment="Top" Height="51" Width="276" Foreground="Red" FontSize="24"/>
-        <Label Content="Password" HorizontalAlignment="Left" Margin="10,113,0,0" VerticalAlignment="Top" Width="154" FontFamily="Comic Sans MS" FontSize="20" Height="46" Grid.RowSpan="2"/>
-        <Label Content="Repeat password" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Center" Width="335" FontFamily="Comic Sans MS" FontSize="20" Height="46" Grid.Row="1"/>
-        <Label Content="Mail" HorizontalAlignment="Left" Margin="10,59,0,0" VerticalAlignment="Top" Width="60" FontFamily="Comic Sans MS" FontSize="20" Height="46"/>
+        <Label Content="Пароль" HorizontalAlignment="Left" Margin="10,113,0,0" VerticalAlignment="Top" Width="154" FontFamily="Comic Sans MS" FontSize="20" Height="46" Grid.RowSpan="2"/>
+        <Label Content="Повторите пароль" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Center" Width="335" FontFamily="Comic Sans MS" FontSize="20" Height="46" Grid.Row="1"/>
+        <Label Content="Почта" HorizontalAlignment="Left" Margin="10,59,0,0" VerticalAlignment="Top" Width="79" FontFamily="Comic Sans MS" FontSize="20" Height="46"/>
     </Grid>
 </Page>

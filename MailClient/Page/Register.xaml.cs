@@ -50,14 +50,14 @@ namespace MailClient.Page
           
         }
 
-        private void MailName_TextChanged(object sender, TextChangedEventArgs e)
+        private async void MailName_TextChanged(object sender, TextChangedEventArgs e)
         {
             Check checkUser = new Check();
             try
             {
                 user = new User() { Mail = MailName.Text + NameMail.Text };
                 perm = JsonSerializer.Serialize(user);
-                bool b = checkUser.Checks(perm, "AddUser", "");
+                bool b = await checkUser.Checks(perm, "AddUser", "");
                 if (b == true)
                 {
                     Reg.Visibility = Visibility.Visible;
