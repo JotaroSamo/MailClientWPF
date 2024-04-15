@@ -18,7 +18,7 @@ namespace MailClient.DB.Content
         // Внешний ключ на сообщение, с которым связан файл
         [ForeignKey("Message")]
         public int MessageID { get; set; }
-        public virtual MessegeMail Message { get; set; }
+        public virtual MessageMail Message { get; set; }
 
         [Required]
         public string FileName { get; set; }

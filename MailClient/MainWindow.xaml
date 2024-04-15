@@ -3,10 +3,23 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:tb="http://www.hardcodet.net/taskbar"
         xmlns:local="clr-namespace:MailClient"
         mc:Ignorable="d"
-        Title="Authorization" Height="504" Width="850" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" >
+        Title="Authorization" Height="504" Width="850" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen" >
     <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+        <tb:TaskbarIcon x:Name="MyNotifyIcon"
+                IconSource="/MailIcon.ico"
+                ToolTipText="Mail"
+                TrayMouseDoubleClick="MyNotifyIcon_TrayMouseDoubleClick"
+                Visibility="Visible">
+            <tb:TaskbarIcon.ContextMenu>
+                <ContextMenu>
+                    <MenuItem Header="Открыть" Click="MyNotifyIcon_TrayMouseDoubleClick"/>
+                    <MenuItem Header="Выход" Click="Exit_Click"/>
+                </ContextMenu>
+            </tb:TaskbarIcon.ContextMenu>
+        </tb:TaskbarIcon>
         <Frame x:Name="frame" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"></Frame>
     </Grid>
     

@@ -32,10 +32,27 @@ namespace MailClient
             InitializeComponent();
             main=this;
             frame.Navigate(new Start(main)) ;
+            this.StateChanged += MainWindow_StateChanged;
+
+        }
+    
+        private void MainWindow_StateChanged(object sender, EventArgs e)
+        {
+            if (WindowState == WindowState.Minimized) // При минимизации окна
+            {
+                this.Hide(); // Скрываем окно
+                MyNotifyIcon.Visibility = Visibility.Visible; // Убедитесь, что иконка в трее видима
+            }
+        }
+        private void Exit_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
+        }
+        private void MyNotifyIcon_TrayMouseDoubleClick(object sender, RoutedEventArgs e)
+        {
+            Show();
+            WindowState = WindowState.Normal;
         }
 
-
-
-     
     }
 }
