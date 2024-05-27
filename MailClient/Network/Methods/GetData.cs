@@ -11,12 +11,17 @@ namespace MailClient.Network.Methods
         public async Task<string> GetDatasH(string Mail)
         {
             TCPClient tCP = new TCPClient();
-            return tCP.Tcpclient("Get Data" + "`"+Mail);
+            return await tCP.Tcpclient("Get Data" + "`"+Mail);
         }
-        public string GetDatasW(string Mail)
+        public async Task<string> GetDatasW(string Mail)
         {
             TCPClient tCP = new TCPClient();
-            return tCP.Tcpclient("Get DataW" + "`" + Mail);
+            return await tCP.Tcpclient("Get DataW" + "`" + Mail);
+        }
+        public async Task<string> GetUsers()
+        {
+            TCPClient tCP = new TCPClient();
+            return await tCP.Tcpclient("/GetUsers");
         }
     }
 }

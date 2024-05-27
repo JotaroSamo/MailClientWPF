@@ -15,8 +15,22 @@ namespace MailClient.Network.Methods
         {
             string message = simvol+ "`" + mail + "`"+perm;
             TCPClient tcp = new TCPClient();
-            message=tcp.Tcpclient(message);
+            message= await tcp.Tcpclient(message);
             if (message == "+")
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        public async Task<bool> IsAdmin(string mail, string simvol, string perm)
+        {
+            string message = simvol + "`" + mail + "`" + perm;
+            TCPClient tcp = new TCPClient();
+            message = await tcp.Tcpclient(message);
+            if (message == "IsAdmin")
             {
                 return true;
             }

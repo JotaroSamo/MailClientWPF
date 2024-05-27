@@ -17,7 +17,7 @@ namespace MailClient.Network
         {
 
         }
-        public string Tcpclient(string mess)
+        public async Task<string> Tcpclient(string mess)
         {
             string Host = Dns.GetHostName();
             string address = Dns.GetHostEntry(Host).AddressList[4].ToString();
@@ -34,7 +34,7 @@ namespace MailClient.Network
                     data = Encoding.Unicode.GetBytes(mess);
 
                     stream.Write(data, 0, data.Length);
-                    data = new byte[512]; 
+                    data = new byte[5000]; 
                     StringBuilder builder = new StringBuilder();
                     int bytes = 0;
                     do

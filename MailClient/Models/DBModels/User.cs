@@ -11,5 +11,12 @@ namespace MailClient.Models.DBModels
         public int Id { get; set; }
         public string? Mail { get; set; }
         public string? Passowrd { get; set; }
+        public Role Role { get; set; }
+
+    }
+    public enum Role
+    {
+        User,
+        Admin
     }
 }

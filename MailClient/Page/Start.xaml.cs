@@ -39,8 +39,18 @@ namespace MailClient.Page
             bool b = await checkUser.Checks(perm, "+","");
             if (b == true)
             {
-                MailContent open = new MailContent(MailName.Text + NameMail.Text);
-                open.Show();
+                bool isAdmin = await checkUser.IsAdmin(perm, "/IsAdmin", "");
+                if (isAdmin)
+                {
+                    AdminPanel adminPanel = new AdminPanel(MailName.Text + NameMail.Text);
+                    adminPanel.Show();
+                }
+                else
+                {
+                    MailContent open = new MailContent(MailName.Text + NameMail.Text);
+                    open.Show();
+                    
+                }
                 main.Close();
             }
             if (b == false)

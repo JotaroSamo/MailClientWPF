@@ -283,11 +283,11 @@ namespace MailClient
             this.Close();
         }
 
-        private void Delete(object sender, RoutedEventArgs e)
+        private async void Delete(object sender, RoutedEventArgs e)
         {
             MessageMail? messegeMail = OutMess.SelectedItem as MessageMail;
             TCPClient tCPClient = new TCPClient();
-            tCPClient.Tcpclient("Delete" + "`" + messegeMail?.Id);
+           await tCPClient.Tcpclient("Delete" + "`" + messegeMail?.Id);
         
         }
 
